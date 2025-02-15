@@ -1,0 +1,317 @@
+[
+    {
+        "title": "Titanic",
+        "year": 1997,
+        "industry": "Hollywood",
+        "genre": ["Drama", "Romance"],
+        "lead_cast": ["Leonardo DiCaprio", "Kate Winslet"],
+        "director": "James Cameron",
+        "notable_aspects": [
+            "Epic retelling of the Titanic disaster with a central love story",
+            "Record-breaking for its time, highest-grossing film until 'Avatar'",
+            "Won 11 Academy Awards including Best Picture"
+        ],
+        "box_office": "$2.2 billion worldwide",
+        "image": "drama/titanic.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Titanic/0J819P1SSRGM411IZOUD156G7Q",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "3h 14min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "The Revenant",
+        "year": 2015,
+        "industry": "Hollywood",
+        "genre": ["Drama", "Adventure", "Western"],
+        "lead_cast": ["Leonardo DiCaprio", "Tom Hardy"],
+        "director": "Alejandro G. Iñárritu",
+        "notable_aspects": [
+            "Survival story of Hugh Glass in the 19th-century American wilderness",
+            "Leonardo DiCaprio won Best Actor Oscar",
+            "Noted for its cinematography and gritty realism"
+        ],
+        "box_office": "$532 million worldwide",
+        "image": "drama/the_revenant.jpg",
+        "ott_link": "https://www.primevideo.com/detail/The-Revenant-4K-UHD/0J7Y9UX4C96LWZS1NIPVX5T4M3",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 36min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "A Star is Born",
+        "year": 2018,
+        "industry": "Hollywood",
+        "genre": ["Drama", "Music", "Romance"],
+        "lead_cast": ["Bradley Cooper", "Lady Gaga"],
+        "director": "Bradley Cooper",
+        "notable_aspects": [
+            "Remake of the classic story of a musician helping a young singer find fame",
+            "Bradley Cooper and Lady Gaga's performances and chemistry",
+            "Music and songs became hugely popular"
+        ],
+        "box_office": "$436 million worldwide",
+        "image": "drama/a_star_is_born.jpg",
+        "ott_link": "https://www.primevideo.com/detail/A-Star-Is-Born/0M2E28IPVX9DQ63NKYY003KMGH",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 16min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "The Blind Side",
+        "year": 2009,
+        "industry": "Hollywood",
+        "genre": ["Drama", "Biography", "Sport"],
+        "lead_cast": ["Sandra Bullock", "Quinton Aaron"],
+        "director": "John Lee Hancock",
+        "notable_aspects": [
+            "Based on the true story of Michael Oher, an NFL player",
+            "Sandra Bullock won Best Actress Oscar",
+            "A touching narrative on family, kindness, and football"
+        ],
+        "box_office": "$309 million worldwide",
+        "image": "drama/the_blind_side.jpg",
+        "ott_link": "https://www.primevideo.com/detail/The-Blind-Side/0KN3PDZB4MBPHRMP4L63I6EDR2",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 9min",
+            "features": ["Dolby Digital", "X-Ray"]
+        }
+    },
+    {
+        "title": "The King's Speech",
+        "year": 2010,
+        "industry": "Hollywood",
+        "genre": ["Drama", "Biography", "History"],
+        "lead_cast": ["Colin Firth", "Geoffrey Rush", "Helena Bonham Carter"],
+        "director": "Tom Hooper",
+        "notable_aspects": [
+            "Story of King George VI overcoming his stammer",
+            "Colin Firth won Best Actor Oscar",
+            "Celebrated for its performances and screenplay"
+        ],
+        "box_office": "$427 million worldwide",
+        "image": "drama/the_kings_speech.jpg",
+        "ott_link": "https://www.primevideo.com/detail/The-Kings-Speech/0TZZZ5O4P7RFMO3423PQEIQYV8",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "1h 58min",
+            "features": ["Dolby Atmos", "X-Ray"]
+        }
+    },
+    {
+        "title": "Thappad",
+        "year": 2020,
+        "industry": "Bollywood",
+        "genre": ["Drama"],
+        "lead_cast": ["Taapsee Pannu", "Pavail Gulati", "Kumud Mishra"],
+        "director": "Anubhav Sinha",
+        "notable_aspects": [
+            "Addresses the issue of domestic violence and marital respect",
+            "Stands out for its powerful performances, especially by Taapsee Pannu",
+            "Sparked significant cultural conversation"
+        ],
+        "box_office": "Moderate commercial success but highly impactful",
+        "image": "drama/thappad.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Thappad/0N9033NDW4VQZBUIHXVSCNNU2D",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 22min",
+            "features": ["Subtitles", "X-Ray"]
+        }
+    },
+    {
+        "title": "Masaan",
+        "year": 2015,
+        "industry": "Bollywood",
+        "genre": ["Drama"],
+        "lead_cast": ["Vicky Kaushal", "Richa Chadha", "Shweta Tripathi"],
+        "director": "Neeraj Ghaywan",
+        "notable_aspects": [
+            "Portrays the lives of individuals in Varanasi, dealing with love, loss, and caste issues",
+            "Received acclaim at Cannes Film Festival",
+            "Vicky Kaushal's performance was a career highlight"
+        ],
+        "box_office": "Limited release but critically acclaimed",
+        "image": "drama/masaan.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Masaan/0LJNP4W9YP4UPE7ZTDX1QOPDW9",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "1h 49min",
+            "features": ["Subtitles", "Closed Captions"]
+        }
+    },
+    {
+        "title": "Dum Laga Ke Haisha",
+        "year": 2015,
+        "industry": "Bollywood",
+        "genre": ["Drama", "Romance"],
+        "lead_cast": ["Bhumi Pednekar", "Ayushmann Khurrana"],
+        "director": "Sharath Kataria",
+        "notable_aspects": [
+            "Focuses on body positivity and unconventional love stories",
+            "Debut of Bhumi Pednekar, who received much praise",
+            "A refreshing take on love and self-acceptance"
+        ],
+        "box_office": "Surprisingly successful for its theme",
+        "image": "drama/dum_laga_ke_haisha.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Dum-Laga-Ke-Haisha/0OJS88FLGJVKJPEL1DXSYM87EM",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "1h 50min",
+            "features": ["Subtitles", "X-Ray"]
+        }
+    },
+    {
+        "title": "CityLights",
+        "year": 2014,
+        "industry": "Bollywood",
+        "genre": ["Drama"],
+        "lead_cast": ["Rajkummar Rao", "Patralekhaa"],
+        "director": "Hansal Mehta",
+        "notable_aspects": [
+            "A poignant tale of a family's struggle in the urban jungle of Mumbai",
+            "Rajkummar Rao's performance was widely appreciated",
+            "An adaptation of the British film 'Metro Manila'"
+        ],
+        "box_office": "Limited theatrical release, but gained recognition later",
+        "image": "drama/citylights.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Citylights/0U8DYGB6RNGPGK01JOZ35W10BP",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 1min",
+            "features": ["Subtitles", "Closed Captions"]
+        }
+    },
+    {
+        "title": "Udaan",
+        "year": 2010,
+        "industry": "Bollywood",
+        "genre": ["Drama"],
+        "lead_cast": ["Rajat Barmecha", "Ronit Roy"],
+        "director": "Vikramaditya Motwane",
+        "notable_aspects": [
+            "A coming-of-age story about a boy facing his abusive father",
+            "Critically acclaimed for its storytelling and performances",
+            "A significant film in the indie cinema movement in India"
+        ],
+        "box_office": "Modest at the box office but highly regarded",
+        "image": "drama/udaan.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Udaan/0HMXUJQ5U3JTUTRJ3YU0CO5ZDS",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 18min",
+            "features": ["Subtitles", "X-Ray"]
+        }
+    },
+    {
+        "title": "Rangasthalam",
+        "year": 2018,
+        "industry": "Tollywood",
+        "genre": ["Drama"],
+        "lead_cast": ["Ram Charan", "Samantha Akkineni"],
+        "director": "Sukumar",
+        "notable_aspects": [
+            "Set in the backdrop of rural politics and disability",
+            "Ram Charan's performance was widely praised",
+            "Noted for its storytelling and cultural authenticity"
+        ],
+        "box_office": "One of the highest-grossing Telugu films, collected over Rs 216 crore",
+        "image": "drama/rangasthalam.jpg",
+        "ott_link": "https://www.primevideo.com/-/nb/detail/Rangasthalam/0HSV48B67LQUWLLQCR26F6ZJFZ",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 50min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Maharshi",
+        "year": 2019,
+        "industry": "Tollywood",
+        "genre": ["Drama"],
+        "lead_cast": ["Mahesh Babu", "Pooja Hegde", "Allari Naresh"],
+        "director": "Vamshi Paidipally",
+        "notable_aspects": [
+            "Focuses on social responsibility and personal growth",
+            "Mahesh Babu's transformation from businessman to activist",
+            "Addresses issues like farmer suicides"
+        ],
+        "box_office": "Grossed over Rs 170 crore, making it one of the top earners of 2019",
+        "image": "drama/maharshi.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Maharshi/0NLRH4HTFWGW3ZKQ29RSTKMZP5",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 53min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Bharat Ane Nenu",
+        "year": 2018,
+        "industry": "Tollywood",
+        "genre": ["Drama", "Political"],
+        "lead_cast": ["Mahesh Babu", "Kiara Advani"],
+        "director": "Koratala Siva",
+        "notable_aspects": [
+            "Centers around a young chief minister's reforms",
+            "Highly acclaimed for its message on political integrity",
+            "Mahesh Babu's portrayal of a dynamic leader"
+        ],
+        "box_office": "Earned over Rs 170 crore worldwide",
+        "image": "drama/bharat_ane_nenu.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Bharat-Ane-Nenu/0LY1YP54ZG8YKX1GTVL8ISES6K",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 53min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Sita Ramam",
+        "year": 2022,
+        "industry": "Tollywood",
+        "genre": ["Drama", "Romance"],
+        "lead_cast": ["Dulquer Salmaan", "Mrunal Thakur", "Rashmika Mandanna"],
+        "director": "Hanu Raghavapudi",
+        "notable_aspects": [
+            "A love story set during the 1960s, involving a soldier and a mysterious woman",
+            "Praised for its emotional depth and period setting",
+            "One of the highest-grossing Telugu films of its year"
+        ],
+        "box_office": "Achieved significant success, grossing over Rs 100 crore",
+        "image": "drama/sita_ramam.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Sita-Ramam/0G2G9F9BZAJUW8XZ2RQ5N3MRBS",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 43min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Jersey",
+        "year": 2019,
+        "industry": "Tollywood",
+        "genre": ["Drama", "Sports"],
+        "lead_cast": ["Nani", "Shraddha Srinath"],
+        "director": "Gowtam Tinnanuri",
+        "notable_aspects": [
+            "A comeback story of an ex-cricketer for his son's sake",
+            "Noted for its emotional narrative and Nani's performance",
+            "One of the top-grossing Telugu films of 2019"
+        ],
+        "box_office": "Grossed over Rs 100 crore worldwide",
+        "image": "drama/jersey.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Jersey/0N52IQ49I9LW3J99KD817Y79AK",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 43min",
+            "features": ["HDR", "Dolby Digital"]
+        }
+    }
+]

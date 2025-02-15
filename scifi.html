@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movieflix - Sci-Fi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.12.1/framer-motion.umd.min.js"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Additional horror effects */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background: url('scifi/image.png') no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(5px) brightness(0.3); /* Darken and blur the background for a creepy effect */
+        }
+        .movieflix-title {
+            position: relative;
+        }
+        
+        .movieflix-title::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.351) 50%, rgba(255, 255, 255, 0) 100%);
+            background-size: 200% 200%;
+            animation: waterDroplets 3s linear infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes waterDroplets {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .movie-card:hover .movie-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .movie-expanded {
+            position: fixed;
+            top: 8%;
+            left: 15%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 1200px;
+            z-index: 101;
+            background: rgba(0, 0, 0, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            box-shadow: 0 4px 8px rgb(141, 40, 40);
+        }
+        .movie-info-left {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .movie-info-left h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .movie-info-left .studio-name {
+            font-size: 1.5rem;
+            color: #fff;
+            display: block;
+        }
+        .movie-info-left .award {
+            color: #00d8ff;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .movie-info-left p, .movie-info-left ul {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        .movie-info-left ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .movie-info-left li {
+            margin-bottom: 5px;
+        }
+        .movie-info-left .meta-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .movie-info-left .meta-info span {
+            background-color: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+        .movie-info-left .genre {
+            color: #fff;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .movie-info-right {
+            flex: 1;
+            text-align: center;
+        }
+        .movie-info-right img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .blur-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 100;
+        }
+
+        .fun-fact-card {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(143, 43, 43, 0.885);
+        }
+        
+        .fun-fact-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .fun-fact-card p {
+            transition: color 0.3s ease;
+        }
+        
+        .fun-fact-card:hover p {
+            color: #ffffff; /* Change text color on hover if you want */
+        }
+        
+        /* Additional hover effects */
+        .fun-fact-card:hover {
+            animation: pulse 0.5s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+    <style>
+        /* Your existing styles */
+        .movie-card:hover .movie-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* AOS Customization */
+        [data-aos="fade-up"] {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        [data-aos="fade-up"].aos-animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header class="flex flex-col items-center justify-between p-4 bg-black sticky top-0 z-10" data-aos="fade-down">
+        <div class="mb-2">
+            <h1 class="text-4xl font-extrabold text-red-600 movieflix-title">MovieFlix</h1>
+        </div>
+        <h2 class="text-2xl font-bold text-red-600">Top Sci-Fi Movies</h2>
+        <div class="flex w-full justify-between">
+            <button onclick="window.location.href='index.html'" class="text-white text-xl"><i class="fas fa-arrow-left"></i></button>
+            <div></div> <!-- Spacer for alignment -->
+        </div>
+    </header>
+    
+    <!-- Movie Grid -->
+    <section class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6" id="movieGrid" data-aos="fade-up">
+        <!-- Movie Cards will be dynamically added here -->
+    </section>
+
+    <!-- Expanded Movie View -->
+    <div id="expandedMovie" class="hidden movie-expanded" data-aos="zoom-in">
+    </div>
+
+    <section class="p-4" id="sciFiFacts" data-aos="fade-up">
+        <h2 class="text-2xl font-bold mb-4 text-white">Sci-Fi Trivia</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="fun-fact-card hover:shadow-lg cursor-pointer" data-aos="flip-up">
+                <p class="text-gray-300">"Avatar" revolutionized cinema with its use of 3D technology and motion capture, creating the immersive world of Pandora and setting new benchmarks for visual effects.</p>
+            </div>
+            <div class="fun-fact-card hover:shadow-lg cursor-pointer" data-aos="flip-up" data-aos-delay="100">
+                <p class="text-gray-300">"Interstellar" explored complex scientific theories like black holes and wormholes, working closely with physicist Kip Thorne to ensure some level of scientific accuracy in its narrative.</p>
+            </div>
+            <div class="fun-fact-card hover:shadow-lg cursor-pointer" data-aos="flip-up" data-aos-delay="200">
+                <p class="text-gray-300">"Koi... Mil Gaya" introduced Bollywood to a friendly alien named Jaadoo, combining sci-fi with family drama, and it became the foundation for the 'Krrish' superhero franchise.</p>
+            </div>
+            <div class="fun-fact-card hover:shadow-lg cursor-pointer" data-aos="flip-up" data-aos-delay="300">
+                <p class="text-gray-300">"PK" used the sci-fi premise of an alien visiting Earth to explore and critique human society, religion, and superstition, making it both a commercial and cultural phenomenon in India.</p>
+            </div>
+            <div class="fun-fact-card hover:shadow-lg cursor-pointer" data-aos="flip-up" data-aos-delay="400">
+                <p class="text-gray-300">"Kalki 2898 AD" is set to blend Indian mythology with a futuristic setting, promising to be one of the most visually spectacular and story-rich sci-fi films from Indian cinema, starring Prabhas and Amitabh Bachchan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const { motion } = window;
+            const grid = document.getElementById('movieGrid');
+            const expandedMovie = document.getElementById('expandedMovie');
+            const body = document.body;
+    
+            // JSON data
+            const movies = [
+                // Your JSON data here
+                {
+                    "title": "Avatar",
+                    "year": 2009,
+                    "industry": "Hollywood",
+                    "genre": ["Sci-Fi", "Adventure", "Fantasy"],
+                    "lead_cast": ["Sam Worthington", "Zoe Saldana", "Sigourney Weaver"],
+                    "director": "James Cameron",
+                    "notable_aspects": [
+                        "Revolutionized 3D technology in cinema",
+                        "Set on the lush alien world of Pandora",
+                        "Highest-grossing film of all time when released"
+                    ],
+                    "box_office": "Over $2.7 billion worldwide, a monumental success",
+                    "image": "scifi/avatar.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Avatar/0LCOF5S7YR0UEA8EYW31TA7OF7",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "2h 42min",
+                        "features": ["3D", "Dolby Atmos", "HDR"]
+                    }
+                },
+                {
+                    "title": "Interstellar",
+                    "year": 2014,
+                    "industry": "Hollywood",
+                    "genre": ["Sci-Fi", "Adventure", "Drama"],
+                    "lead_cast": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
+                    "director": "Christopher Nolan",
+                    "notable_aspects": [
+                        "Explores complex concepts like relativity and wormholes",
+                        "Features stunning visual effects and scientific accuracy",
+                        "Hans Zimmer's score is considered iconic"
+                    ],
+                    "box_office": "Over $677 million worldwide, critically and commercially successful",
+                    "image": "scifi/interstellar.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Interstellar/0PUNMGZEWOMYFKR1XIGOLTL2YM",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "2h 49min",
+                        "features": ["IMAX", "Dolby Atmos"]
+                    }
+                },
+                {
+                    "title": "The Matrix",
+                    "year": 1999,
+                    "industry": "Hollywood",
+                    "genre": ["Sci-Fi", "Action"],
+                    "lead_cast": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
+                    "director": "The Wachowskis",
+                    "notable_aspects": [
+                        "Introduced bullet time effects to mainstream cinema",
+                        "Explores themes of reality, freedom, and human control",
+                        "Spawned a franchise and influenced numerous sci-fi films"
+                    ],
+                    "box_office": "Over $463 million worldwide, a cultural phenomenon",
+                    "image": "scifi/the_matrix.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/The-Matrix/0SC64NC24QA7M9AFWBEK87WWS0",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "2h 16min",
+                        "features": ["Dolby Vision", "Dolby Atmos"]
+                    }
+                },
+                {
+                    "title": "Jurassic Park",
+                    "year": 1993,
+                    "industry": "Hollywood",
+                    "genre": ["Sci-Fi", "Adventure"],
+                    "lead_cast": ["Sam Neill", "Laura Dern", "Jeff Goldblum"],
+                    "director": "Steven Spielberg",
+                    "notable_aspects": [
+                        "Revolutionized the use of CGI in film",
+                        "Brought dinosaurs to life in a believable way",
+                        "Adapted from Michael Crichton's novel"
+                    ],
+                    "box_office": "Over $1 billion worldwide, adjusted for inflation among the highest grossing ever",
+                    "image": "scifi/jurassic_park.jpg",
+                    "ott_link": "https://www.hotstar.com/in/movies/jurassic-park/1971000492?utm_source=jiocinema",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "2h 7min",
+                        "features": ["Dolby Vision", "Dolby Atmos"]
+                    }
+                },
+                {
+                    "title": "Gravity",
+                    "year": 2013,
+                    "industry": "Hollywood",
+                    "genre": ["Sci-Fi", "Drama", "Thriller"],
+                    "lead_cast": ["Sandra Bullock", "George Clooney"],
+                    "director": "Alfonso Cuarón",
+                    "notable_aspects": [
+                        "Known for its groundbreaking visual effects and long takes in space",
+                        "A story of survival in space after a disaster",
+                        "Won multiple Oscars, including Best Director for Cuarón"
+                    ],
+                    "box_office": "Over $723 million worldwide, a technical and visual marvel",
+                    "image": "scifi/gravity.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Gravity/0MW3B1AN9EBQN5F5825WH831MA",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "1h 31min",
+                        "features": ["3D", "IMAX", "Dolby Atmos"]
+                    }
+                },
+                {
+                    "title": "Mr. India",
+                    "year": 1987,
+                    "industry": "Bollywood",
+                    "genre": ["Sci-Fi", "Action", "Comedy"],
+                    "lead_cast": ["Anil Kapoor", "Sridevi", "Amrish Puri"],
+                    "director": "Shekhar Kapur",
+                    "notable_aspects": [
+                        "Introduced the concept of invisibility in Indian cinema",
+                        "Iconic villain Mogambo played by Amrish Puri",
+                        "Memorable for its blend of sci-fi with social messages"
+                    ],
+                    "box_office": "Was a blockbuster in its time, exact figures not available",
+                    "image": "scifi/mr_india.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Mr-India/0NBPIBF0NIRC9U3VFXA6X6GOBA",
+                    "technical_details": {
+                        "resolution": "SD",
+                        "duration": "2h 57min",
+                        "features": ["Subtitles"]
+                    }
+                },
+                {
+                    "title": "Koi... Mil Gaya",
+                    "year": 2003,
+                    "industry": "Bollywood",
+                    "genre": ["Sci-Fi", "Drama", "Family"],
+                    "lead_cast": ["Hrithik Roshan", "Preity Zinta", "Rekha"],
+                    "director": "Rakesh Roshan",
+                    "notable_aspects": [
+                        "Introduced the character of Jaadoo, an alien",
+                        "Became a franchise with sequels in 'Krrish' series",
+                        "Balanced emotional storytelling with sci-fi elements"
+                    ],
+                    "box_office": "Over ₹80 crore, one of the highest-grossing films of the year",
+                    "image": "scifi/koi_mil_gaya.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Koi-Mil-Gaya/0TEJVUOJVBKQTXU91D75C5D5NF",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 51min",
+                        "features": ["Dolby Digital", "Subtitles"]
+                    }
+                },
+                {
+                    "title": "Ra.One",
+                    "year": 2011,
+                    "industry": "Bollywood",
+                    "genre": ["Sci-Fi", "Action", "Adventure"],
+                    "lead_cast": ["Shah Rukh Khan", "Kareena Kapoor Khan", "Arjun Rampal"],
+                    "director": "Anubhav Sinha",
+                    "notable_aspects": [
+                        "One of the most expensive Bollywood films at the time",
+                        "Explored themes of video games and virtual reality",
+                        "Noted for its visual effects and action sequences"
+                    ],
+                    "box_office": "Over ₹200 crore, despite mixed reviews, was a commercial success",
+                    "image": "scifi/ra_one.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/RaOne/0TZZDMNZEZX39DW6CL8QS4J8X1",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 36min",
+                        "features": ["Dolby Digital", "Subtitles"]
+                    }
+                },
+                {
+                    "title": "PK",
+                    "year": 2014,
+                    "industry": "Bollywood",
+                    "genre": ["Sci-Fi", "Comedy", "Drama"],
+                    "lead_cast": ["Aamir Khan", "Anushka Sharma", "Sushant Singh Rajput"],
+                    "director": "Rajkumar Hirani",
+                    "notable_aspects": [
+                        "Explores themes of religion and human values through an alien's perspective",
+                        "One of the highest-grossing Indian films",
+                        "Aamir Khan's performance was critically acclaimed"
+                    ],
+                    "box_office": "Over ₹792 crore worldwide, a blockbuster hit",
+                    "image": "scifi/pk.jpg",
+                    "ott_link": "https://www.netflix.com/in/title/70303496",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 33min",
+                        "features": ["Dolby Digital", "Subtitles"]
+                    }
+                },
+                {
+                    "title": "Mission Mangal",
+                    "year": 2019,
+                    "industry": "Bollywood",
+                    "genre": ["Sci-Fi", "Drama", "Biography"],
+                    "lead_cast": ["Akshay Kumar", "Vidya Balan", "Sonakshi Sinha"],
+                    "director": "Jagan Shakti",
+                    "notable_aspects": [
+                        "Based on the true story of ISRO's Mars Orbiter Mission",
+                        "Celebrated for its portrayal of women scientists",
+                        "Mixes real science with dramatic storytelling"
+                    ],
+                    "box_office": "Over ₹200 crore, a box office success",
+                    "image": "scifi/mission_mangal.jpg",
+                    "ott_link": "https://www.hotstar.com/in/movies/mission-mangal/1260011536",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 13min",
+                        "features": ["Dolby Digital", "Subtitles"]
+                    }
+                },
+                {
+                    "title": "Dasavatharam",
+                    "year": 2008,
+                    "industry": "Tollywood",
+                    "genre": ["Sci-Fi", "Action", "Drama"],
+                    "lead_cast": ["Kamal Haasan", "Asin", "Jaya Prada"],
+                    "director": "K. S. Ravikumar",
+                    "notable_aspects": [
+                        "Kamal Haasan played ten different roles, showcasing his versatility",
+                        "Involved complex makeup and prosthetics for character transformation",
+                        "Blends historical events with a scientific plot involving a bio-weapon"
+                    ],
+                    "box_office": "Over ₹200 crore worldwide, making it one of the highest-grossing Tamil films at the time",
+                    "image": "scifi/dasavatharam.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Dasavathaaram/0J00KSXRLMVN1RMZ4C02ONQUJL",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 48min",
+                        "features": ["Dolby Digital", "Subtitles"]
+                    }
+                },
+                {
+                    "title": "Eega",
+                    "year": 2012,
+                    "industry": "Tollywood",
+                    "genre": ["Sci-Fi", "Fantasy", "Action"],
+                    "lead_cast": ["Nani", "Samantha Ruth Prabhu", "Sudeep"],
+                    "director": "S. S. Rajamouli",
+                    "notable_aspects": [
+                        "Unique concept of a man reincarnated as a fly for revenge",
+                        "Praised for its innovative storytelling and VFX",
+                        "A box office and critical success"
+                    ],
+                    "box_office": "Over ₹125 crore, a blockbuster hit",
+                    "image": "scifi/eega.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Eega/0QBUB4RW5KJT3KT86FKT3HNQIK",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 25min",
+                        "features": ["Dolby Digital", "Subtitles"]
+                    }
+                },
+                {
+                    "title": "24",
+                    "year": 2016,
+                    "industry": "Tollywood",
+                    "genre": ["Sci-Fi", "Thriller"],
+                    "lead_cast": ["Suriya", "Samantha Ruth Prabhu", "Nithya Menen"],
+                    "director": "Vikram Kumar",
+                    "notable_aspects": [
+                        "Time travel and time loop concepts with a watch as the central device",
+                        "Suriya's triple role was a highlight",
+                        "Noted for its plot twists and engaging narrative"
+                    ],
+                    "box_office": "Over ₹100 crore, a commercial success",
+                    "image": "scifi/24.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/24/0MRWZGKRKKHFUEN3OTNCBL9CSS",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 44min",
+                        "features": ["Dolby Digital", "Subtitles"]
+                    }
+                },
+                {
+                    "title": "Robo",
+                    "year": 2010,
+                    "industry": "Tollywood",
+                    "genre": ["Sci-Fi", "Action"],
+                    "lead_cast": ["Rajinikanth", "Aishwarya Rai Bachchan"],
+                    "director": "S. Shankar",
+                    "notable_aspects": [
+                        "Also known as 'Enthiran', one of the highest-grossing Tamil films",
+                        "Explores themes of robotics, AI, and human emotion",
+                        "Known for its groundbreaking VFX for Indian cinema at the time"
+                    ],
+                    "box_office": "Over ₹290 crore worldwide, a monumental success",
+                    "image": "scifi/robo.jpg",
+                    "ott_link": "https://www.sunnxt.com/telugu-movie-robo-2010/detail/101254",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 54min",
+                        "features": ["Dolby Digital", "Subtitles"]
+                    }
+                },
+                {
+                    "title": "Kalki 2898 AD",
+                    "year": 2024,
+                    "industry": "Tollywood",
+                    "genre": ["Sci-Fi", "Action", "Fantasy"],
+                    "lead_cast": ["Prabhas", "Amitabh Bachchan", "Deepika Padukone"],
+                    "director": "Nag Ashwin",
+                    "notable_aspects": [
+                        "A blend of Hindu mythology and futuristic dystopia",
+                        "One of the most expensive Indian films ever made",
+                        "Expected to set new benchmarks in Indian cinema VFX"
+                    ],
+                    "box_office": "Projected to be among the highest-grossing films, exact figures TBD",
+                    "image": "scifi/kalki_2898_ad.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Kalki-2898-AD/0KQU5V0T0FGF8L5L368NKW6INT",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "3h+",
+                        "features": ["HDR", "Dolby Atmos"]
+                    }
+                }
+            ];
+    
+            // Initialize AOS
+            AOS.init({
+                duration: 1000, // Duration of animation
+                once: true, // Whether animation should happen only once - during the first scroll
+            });
+
+            // Generate movie cards
+            movies.forEach(movie => {
+                const card = document.createElement('div');
+                card.className = 'relative movie-card bg-gray-900 rounded-lg overflow-hidden group';
+                card.setAttribute('data-aos', 'fade-up'); // AOS effect for each card
+                card.innerHTML = `
+                    <img src="${movie.image}" class="w-full h-full object-cover group-hover:opacity-75 transition lazyload">
+                    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 p-4 opacity-0 transform translate-y-6 transition movie-info">
+                        <h3 class="text-lg font-bold">${movie.title}</h3>
+                        <p class="text-sm">⭐ ${movie.year}</p>
+                        <button class="bg-red-600 text-white px-3 py-1 rounded mt-2 learn-more">Learn More</button>
+                    </div>
+                `;
+                card.querySelector('.learn-more').addEventListener('click', () => showMovieDetails(movie));
+                grid.appendChild(card);
+            });
+    
+            function showMovieDetails(movie) {
+                // Blur background
+                const blurElement = document.createElement('div');
+                blurElement.className = 'blur-background';
+                body.appendChild(blurElement);
+    
+                // Determine if the movie has any awards
+                const award = movie.award ? `<span class="award">${movie.award}</span>` : '';
+    
+                // Dynamically generate the technical details
+                let techDetailsHtml = '';
+                if (movie.technical_details) {
+                    techDetailsHtml += `<span>${movie.technical_details.resolution}</span>`;
+                    techDetailsHtml += `<span>${movie.technical_details.duration}</span>`;
+                    movie.technical_details.features.forEach(feature => {
+                        techDetailsHtml += `<span>${feature}</span>`;
+                    });
+                }
+    
+                expandedMovie.innerHTML = `
+                    <div class="movie-info-left" data-aos="fade-right">
+                        <h2>${movie.title}</h2>
+                        ${award}
+                        <p>${movie.year} | ${movie.industry} | ${movie.director}</p>
+                        <p>${movie.lead_cast.join(', ')}</p>
+                        <p>${movie.box_office}</p>
+                        <div class="meta-info">
+                            ${techDetailsHtml}
+                        </div>
+                        <p class="genre">${movie.genre.join(' • ')}</p>
+                        <p>${movie.notable_aspects.join('. ')}</p>
+                        <a href="${movie.ott_link}" target="_blank" class="bg-red-600 text-white px-3 py-1 rounded mt-2 inline-block">Watch Now</a>
+                        <button onclick="window.location.href='scifi.html'" class="bg-gray-600 text-white px-3 py-1 rounded mt-2 ml-2">Close</button>
+                    </div>
+                    <div class="movie-info-right" data-aos="fade-left">
+                        <img src="${movie.image}" alt="${movie.title}">
+                    </div>
+                `;
+                expandedMovie.style.display = 'flex';
+                motion.animate(expandedMovie, { scale: [0.8, 1] }, { duration: 0.5 });
+            }
+    
+            function closeExpandedView() {
+                const blurElement = document.querySelector('.blur-background');
+                if (blurElement) {
+                    blurElement.remove();
+                }
+                expandedMovie.style.display = 'none';
+            }
+    
+            // Initial animation for movie cards
+            document.querySelectorAll(".movie-card").forEach(card => {
+                motion.animate(card, { scale: [0.9, 1] }, { duration: 0.5 });
+            });
+        });
+    </script>
+</body>
+</html>

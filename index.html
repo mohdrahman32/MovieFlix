@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movieflix - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.12.1/framer-motion.umd.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <style>
+        .category-row::-webkit-scrollbar {
+            display: none;
+        }
+        a:hover{
+            color: #FFC107;
+        }
+        /* Navbar Styles */
+        nav {
+            background-color: transparent;
+            padding: 1rem 0;
+            position: relative;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        nav a, nav button {
+            font-family: 'Montserrat', sans-serif; /* Assuming Montserrat is available, else use any suitable font */
+        }
+        nav a {
+            color: #ff4136;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #FFC107;
+        }
+        nav button {
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bolder;
+        }
+        .hvr-grow {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .hvr-pulse-grow {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .logout-btn {
+            background-color: #ff4136;
+            color: white;
+        }
+        .logout-btn:hover {
+            background-color: #ff725c;
+        }
+
+        .modal, .profile-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.7); /* Blurred background */
+        }
+        .modal-content, .profile-content {
+            background-color: #fefefe;
+            margin: 10vh auto; /* Changed from 15% to 10vh for better mobile view */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%; /* Increased width for smaller screens */
+            max-width: 500px; /* Keeps the max width for larger screens */
+            animation: fadeIn 0.5s;
+            border-radius: 10px;
+            color: #333;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Add some shadow for depth */
+        }
+
+        @media (max-width: 768px) {
+            .modal-content, .profile-content {
+                margin: 5vh auto; /* Adjust margin for smaller screens */
+                width: 95%; /* Nearly full width for better visibility on mobile */
+            }
+
+            /* Adjust input elements for better mobile experience */
+            input[type="text"], input[type="date"], input[type="email"], input[type="tel"] {
+                width: 100%;
+            }
+
+            /* Button adjustments for mobile */
+            .modal-content button[type="submit"], .logout-btn {
+                width: 100%;
+            }
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .profile-content > div {
+            margin-bottom: 10px;
+        }
+        .logout-btn {
+            background-color: #ff4136;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .logout-btn:hover {
+            background-color: #ff725c;
+        }
+        input[type="text"], input[type="date"], input[type="email"], input[type="tel"] {
+            color: black; /* Make sure input text is visible */
+        }
+        /* Style for input placeholders */
+        ::placeholder {
+            color: #999; /* Placeholder text color */
+        }
+        /* Styling for buttons in forms */
+        .modal-content button[type="submit"] {
+            color: white; /* Button text color */
+        }
+        /* Adjusting the modal's position for better visibility */
+        @media screen and (min-height: 600px) {
+            .modal-content, .profile-content {
+                margin-top: 10%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <nav data-aos="fade-down" data-aos-duration="1000">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold hvr-grow">MovieFlix</a>
+            <ul class="flex space-x-4">
+                <!-- Navigation links -->
+            </ul>
+            <div class="flex space-x-4">
+                <button id="loginBtn" class="hvr-grow bg-red-600 text-white p-2 rounded">Login</button>
+                <button id="profileBtn" class="hvr-pulse-grow bg-red-600 text-white p-2 rounded hidden">
+                    <i class="fas fa-user"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal for Login Form -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <form id="loginForm" class="flex flex-col space-y-4">
+                <input type="text" name="name" placeholder="Name" class="p-2 border rounded">
+                <input type="date" name="dob" placeholder="Date of Birth" class="p-2 border rounded">
+                <input type="email" name="email" placeholder="Email" class="p-2 border rounded">
+                <input type="tel" name="phone" placeholder="Phone Number" class="p-2 border rounded">
+                <button type="submit" class="hvr-grow bg-red-600 text-white p-2 rounded hover:bg-red-700">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div id="profileModal" class="profile-modal">
+        <div class="profile-content">
+            <span class="close">×</span>
+            <div><strong>Name:</strong> <span id="profileName"></span></div>
+            <div><strong>DOB:</strong> <span id="profileDob"></span></div>
+            <div><strong>Email:</strong> <span id="profileEmail"></span></div>
+            <div><strong>Phone:</strong> <span id="profilePhone"></span></div>
+            <button class="logout-btn" id="logoutBtn">Logout</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                duration: 1000,
+                once: true,
+            });
+            const loginBtn = document.getElementById('loginBtn');
+            const profileBtn = document.getElementById('profileBtn');
+            const modal = document.getElementById('loginModal');
+            const profileModal = document.getElementById('profileModal');
+            const closeBtn = modal.querySelector('.close');
+            const profileCloseBtn = profileModal.querySelector('.close');
+            const loginForm = document.getElementById('loginForm');
+            const logoutBtn = document.getElementById('logoutBtn');
+
+            // Show login modal with animation
+            loginBtn.addEventListener('click', function() {
+                modal.style.display = "block";
+                modal.style.animation = "fadeIn 0.5s";
+            });
+
+            // Close login modal
+            closeBtn.onclick = function() {
+                modal.style.display = "none";
+            };
+
+            // Show profile modal
+            profileBtn.addEventListener('click', function() {
+                const data = JSON.parse(localStorage.getItem('userProfile'));
+                if (data) {
+                    // Populate the profile details
+                    document.getElementById('profileName').textContent = data.name || 'Not provided';
+                    document.getElementById('profileDob').textContent = data.dob || 'Not provided';
+                    document.getElementById('profileEmail').textContent = data.email || 'Not provided';
+                    document.getElementById('profilePhone').textContent = data.phone || 'Not provided';
+                    profileModal.style.display = "block";
+                }
+            });
+
+            // Close profile modal
+            profileCloseBtn.onclick = function() {
+                profileModal.style.display = "none";
+            };
+
+            // When the user clicks anywhere outside of the modals, close them
+            window.onclick = function(event) {
+                if (event.target == modal || event.target == profileModal) {
+                    modal.style.display = "none";
+                    profileModal.style.display = "none";
+                }
+            };
+
+            // Handle form submission
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault(); 
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData.entries());
+                
+                // Save user data to localStorage
+                localStorage.setItem('userProfile', JSON.stringify(data));
+                
+                // Hide modal
+                modal.style.display = "none";
+                
+                // Update UI for logged in state
+                loginBtn.style.display = 'none';
+                profileBtn.style.display = 'block';
+            });
+
+            // Check if user is logged in on page load
+            const userProfile = localStorage.getItem('userProfile');
+            if (userProfile) {
+                loginBtn.style.display = 'none';
+                profileBtn.style.display = 'block';
+            }
+
+            // Logout functionality
+            logoutBtn.addEventListener('click', function() {
+                localStorage.removeItem('userProfile');
+                profileModal.style.display = "none";
+                profileBtn.style.display = 'none';
+                loginBtn.style.display = 'block';
+                alert('Logged out successfully!');
+            });
+        });
+    </script>
+    
+    <!-- Hero Section -->
+    <section class="relative h-screen flex flex-col items-center justify-center text-center p-6 overflow-hidden" id="home" data-aos="fade-down" data-aos-duration="1000">
+        <!-- Background with gradient and particle effects -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black">
+            <!-- Canvas for particle animation -->
+            <canvas id="particleCanvas" class="absolute inset-0 w-full h-full"></canvas>
+        </div>
+    
+        <div class="relative z-10 max-w-2xl">
+            <h1 class="text-red-600 text-5xl font-bold mb-4" data-aos="fade-up" data-aos-duration="1000">Welcome to Movieflix</h1>
+            <p class="text-lg mb-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Discover and explore the best movies across various genres.</p>
+            <div class="flex space-x-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <!-- Enhanced Select Tag -->
+                <select id="categorySelect" class="custom-select bg-gray-800 p-3 rounded text-white border border-gray-700 focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all duration-300 ease-in-out">
+                    <option value="">Select Category</option>
+                    <option value="action.html">Action</option>
+                    <option value="drama.html">Drama</option>
+                    <option value="comedy.html">Comedy</option>
+                    <option value="horror.html">Horror</option>
+                    <option value="thriller.html">Thriller</option>
+                    <option value="scifi.html">Sci-Fi</option>
+                    <option value="adventure.html">Adventure</option>
+                    <option value="fantasy.html">Fantasy</option>
+                    <option value="biography.html">Bio-Graphy</option>
+                </select>
+                <!-- Enhanced Button Tag -->
+                <button onclick="goToCategory()" class="custom-button bg-red-600 px-6 py-3 rounded-lg font-bold text-white transition-all duration-300 ease-in-out hover:bg-red-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 active:scale-95">
+                    Explore
+                </button>
+            </div>
+        </div>
+    
+        <style>
+            /* Custom styling for the select element */
+            .custom-select {
+                background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+                background-repeat: no-repeat;
+                background-position: right 0.75rem center;
+                background-size: 1.5rem;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            }
+    
+            /* Remove default select arrow for Firefox */
+            .custom-select::-ms-expand {
+                display: none;
+            }
+    
+            /* Custom styling for the button */
+            .custom-button {
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            }
+        </style>
+    
+        <!-- Additional script for enhancing interactivity -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const select = document.getElementById('categorySelect');
+                const button = document.querySelector('button.custom-button');
+    
+                // Enhance select with animation
+                select.addEventListener('change', function() {
+                    gsap.to(this, { 
+                        scale: 1.05, 
+                        duration: 0.3, 
+                        ease: 'power2.out',
+                        onComplete: () => {
+                            gsap.to(this, { 
+                                scale: 1, 
+                                duration: 0.15,
+                                ease: 'power2.in'
+                            });
+                        }
+                    });
+                });
+    
+                // Enhance button with animation on click
+                button.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevent default action for demo purposes
+                    gsap.to(this, { 
+                        scale: 0.95, 
+                        duration: 0.1, 
+                        ease: 'power2.out',
+                        onComplete: () => {
+                            gsap.to(this, { 
+                                scale: 1, 
+                                duration: 0.1,
+                                ease: 'power2.in'
+                            });
+                        }
+                    });
+                });
+            });
+        </script>
+    </section>
+    
+        <!-- JavaScript for particle animation -->
+        <script>
+            const canvas = document.getElementById('particleCanvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+    
+            let particlesArray;
+    
+            // Particle constructor
+            function Particle(x, y, directionX, directionY, size, color) {
+                this.x = x;
+                this.y = y;
+                this.directionX = directionX;
+                this.directionY = directionY;
+                this.size = size;
+                this.color = color;
+            }
+    
+            // Add draw method to particle prototype
+            Particle.prototype.draw = function() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            };
+    
+            // Update particle position, size, and draw
+            Particle.prototype.update = function() {
+                // Check if particle is still within canvas
+                if (this.x > canvas.width || this.x < 0) {
+                    this.directionX = -this.directionX;
+                }
+                if (this.y > canvas.height || this.y < 0) {
+                    this.directionY = -this.directionY;
+                }
+    
+                // Move particle
+                this.x += this.directionX;
+                this.y += this.directionY;
+    
+                // Draw particle
+                this.draw();
+            };
+    
+            // Create particle array
+            function init() {
+                particlesArray = [];
+                for (let i = 0; i < 100; i++) {
+                    let size = (Math.random() * 5) + 1;
+                    let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+                    let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+                    let directionX = (Math.random() * .4) - .2;
+                    let directionY = (Math.random() * .4) - .2;
+                    let color = 'rgba(255, 255, 255, .8)';
+    
+                    particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+                }
+            }
+    
+            // Animation Loop
+            function animate() {
+                requestAnimationFrame(animate);
+                ctx.clearRect(0, 0, innerWidth, innerHeight);
+    
+                for (let i = 0; i < particlesArray.length; i++) {
+                    particlesArray[i].update();
+                }
+            }
+    
+            // Resize event
+            window.addEventListener('resize', 
+                function(){
+                    canvas.width = innerWidth;
+                    canvas.height = innerHeight;
+                    init();
+                }
+            );
+    
+            // Initialize
+            init();
+            animate();
+        </script>
+    </section>
+
+    
+
+    <!-- Trending Movies -->
+    <section class="p-6 bg-gray-900" id="trending" data-aos="fade-up" data-aos-duration="800">
+        <h3 class="text-2xl font-bold mb-4" data-aos="fade-right" data-aos-duration="500">Trending Movies</h3>
+        <p class="text-lg mb-4 text-gray-300" data-aos="fade-up" data-aos-duration="500">
+            Explore these buzzworthy films currently making waves:
+            <br><span class="text-red-500 font-semibold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"><a href="https://in.bookmyshow.com/hyderabad/movies/captain-america-brave-new-world/ET00399765">Captain America: Brave New World (2025)</a></span> - Sam Wilson rises as Captain America, facing new threats in a thrilling action adventure.
+            <br><span class="text-red-500 font-semibold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"><a href="https://in.bookmyshow.com/hyderabad/movies/chhaava/ET00408691">Chhaava (2024)</a></span> - Showcases the epic journey of Chhatrapati Sambhaji Maharaj, filled with valor, sacrifice, and intense action.
+            <br><span class="text-red-500 font-semibold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"><a href="https://www.netflix.com/in/title/82006666">Pushpa 2 (2025)</a></span> - An action sequel with intense fight scenes and cultural depth.
+            <br><span class="text-red-500 font-semibold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400"><a href="https://in.bookmyshow.com/hyderabad/movies/thandel/ET00384012">Thandel (2025)</a></span> - A thrilling mix of crime and suspense, set against a backdrop of stunning visuals.
+        </p>
+        <div class="flex space-x-4 overflow-x-scroll category-row">
+            <img src="assets/brave.jpg" class="w-48 h-64 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-duration="500">
+            <img src="assets/chhaava.jpg" class="w-48 h-64 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-duration="500">
+            <img src="assets/pushpa2.jpg" class="w-48 h-64 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-duration="500">
+            <img src="assets/thandel.jpg" class="w-48 h-64 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-duration="500">
+        </div>
+    </section>
+    
+    <!-- Upcoming Releases Section -->
+    <section class="p-6 bg-gray-900" id="upcoming" data-aos="fade-left" data-aos-duration="800">
+        <h3 class="text-2xl font-bold mb-4" data-aos="fade-right" data-aos-duration="500">Upcoming Releases</h3>
+        <p class="text-lg mb-4 text-gray-300" data-aos="fade-up" data-aos-duration="500">
+            Look forward to these cinematic gems on the horizon:
+            <br><span class="text-blue-500 font-semibold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"><a href="https://youtu.be/jan5CFWs9ic?si=ovvPo3-Ow3RQ5gxm">Jurassic World: Rebirth (2025)</a></span> - A thrilling revival of the dinosaur saga with new adventures.
+            <br><span class="text-blue-500 font-semibold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"><a href="https://youtu.be/l2AMaPCsJIQ?si=UVVqfQT6etvimWbD">Sikandar (2025)</a></span> - Salman Khan stars in this action-drama depicting bravery and adventure.
+            <br><span class="text-blue-500 font-semibold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"><a href="https://youtu.be/PT0lYT4O9tQ?si=KXvAtK5a_qYuDEh9">Hit 3 (2025)</a></span> - The next chapter in the Telugu action thriller franchise, packed with suspense.
+            <br><span class="text-blue-500 font-semibold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400"><a href="https://youtu.be/NOhDyUmT9z0?si=UjEgzPLyJZN1DeJJ">Mission Impossible: Final Revoking (2025)</a></span> - The epic conclusion to Ethan Hunt's adventures with the highest stakes yet.
+        </p>
+        <div class="flex space-x-4 overflow-x-scroll category-row">
+            <img src="assets/rebirth.jpg" class="w-48 h-64 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-duration="500">
+            <img src="assets/sikandar.jpg" class="w-48 h-64 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-duration="500">
+            <img src="assets/hit3.jpg" class="w-48 h-64 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-duration="500">
+            <img src="assets/MI-final.jpg" class="w-48 h-64 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-duration="500">
+        </div>
+    </section>
+    
+    <!-- Top Rated Movies Section -->
+    <section class="p-6 bg-gray-900" id="top-rated" data-aos="fade-right" data-aos-duration="800">
+        <h3 class="text-2xl font-bold mb-4" data-aos="fade-left" data-aos-duration="500">Top Rated Movies</h3>
+        <p class="text-lg mb-4 text-gray-300" data-aos="fade-up" data-aos-duration="500">
+            Discover the films that have captivated audiences and critics alike:
+            <br><span class="text-green-500 font-semibold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"><a href="https://www.primevideo.com/detail/Get-Out/0I9VQV8TPDEL2MLX080A1JKN6X">Get Out (2017)</a></span> - A groundbreaking horror-comedy with deep social commentary.
+            <br><span class="text-green-500 font-semibold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"><a href="https://www.primevideo.com/detail/Dangal/0IIOG10OTQ7YE1RZ3I202LHQUB">Dangal (2016)</a></span> - An inspiring true story of a father training his daughters to become wrestling champions.
+            <br><span class="text-green-500 font-semibold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"><a href="https://www.primevideo.com/detail/Baahubali-The-Beginning/0OZ6EXLR47FYSDHDMJBQ33V4BI">Baahubali: The Beginning (2015)</a></span> - An epic saga of love, war, and betrayal in ancient India.
+            <br><span class="text-green-500 font-semibold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400"><a href="https://www.primevideo.com/detail/Gully-Boy/0I5OF8K1O8JNLUPOQ3VU3MBR5I">Gully Boy (2019)</a></span> - A vibrant musical drama about a Mumbai slum-dweller aspiring to be a rapper.
+        </p>
+        <div class="flex space-x-4 overflow-x-scroll category-row">
+            <img src="assets/getout.jpg" class="w-48 h-64 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-duration="500">
+            <img src="assets/dangal.jpg" class="w-48 h-64 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-duration="500">
+            <img src="assets/bahubali.jpg" class="w-48 h-64 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-duration="500">
+            <img src="assets/gullyboy.jpg" class="w-48 h-64 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-duration="500">
+        </div>
+    </section>
+    
+    <!-- Recommended Movies Section -->
+    <section class="p-6 bg-gray-900" id="recommended" data-aos="fade-up" data-aos-duration="800">
+        <h3 class="text-2xl font-bold mb-4" data-aos="fade-right" data-aos-duration="500">Recommended for You</h3>
+        <p class="text-lg mb-4 text-gray-300" data-aos="fade-up" data-aos-duration="500">
+            Discover these films, handpicked for your viewing pleasure:
+            <br><span class="text-purple-500 font-semibold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"><a href="https://www.primevideo.com/detail/Dune-Part-Two/0NW4P371MNSJ4Q6JS5KVBIDW8Q">Dune: Part Two (2024)</a></span> - Continue the epic journey in the sands of Arrakis with more intrigue and action.
+            <br><span class="text-purple-500 font-semibold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"><a href="https://www.primevideo.com/detail/Kill/0JMFNIW8UW7PIC4EZBTY7ZVJ42">Kill (2024)</a></span> - A high-octane thriller that keeps you on the edge of your seat with its relentless pace.
+            <br><span class="text-purple-500 font-semibold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"><a href="https://www.hotstar.com/in/movies/baahubali2-the-conclusion/1770016137">Baahubali: The Conclusion (2017)</a></span> - Witness the grandeur and conclusion of this legendary tale.
+            <br><span class="text-purple-500 font-semibold" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400"><a href="https://www.primevideo.com/detail/Andhadhun/0I9XWO2UA8XJ2YVJR3PJZVSTQU">Andhadhun (2018)</a></span> - A dark comedy thriller where nothing is as it seems, masterfully blending suspense with humor.
+        </p>
+        <div class="flex space-x-4 overflow-x-scroll category-row">
+            <img src="assets/dune2.jpg" class="w-48 h-64 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-duration="500">
+            <img src="assets/kill.jpg" class="w-48 h-64 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-duration="500">
+            <img src="assets/baahubali2.jpg" class="w-48 h-64 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-duration="500">
+            <img src="assets/andhadhun.jpg" class="w-48 h-64 rounded-lg hover:scale-105 transition" data-aos="zoom-in" data-aos-duration="500">
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white p-6 mt-10" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+            
+            <!-- Branding & Logo -->
+            <div data-aos="fade-up" data-aos-duration="500">
+                <h2 class="text-red-600 text-3xl font-bold">Movieflix</h2>
+                <p class="text-gray-400 mt-2">Your Ultimate Movie Streaming Guide</p>
+            </div>
+    
+            <!-- Quick Links -->
+            <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                <h3 class="text-lg font-bold mb-2">Quick Links</h3>
+                <ul class="text-gray-400 space-y-1">
+                    <li><a href="#home" class="hover:text-red-500 scroll-link">Home</a></li>
+                    <li><a href="#trending" class="hover:text-red-500 scroll-link">Trending</a></li>
+                    <li><a href="#upcoming" class="hover:text-red-500 scroll-link">Upcoming</a></li>
+                    <li><a href="#top-rated" class="hover:text-red-500 scroll-link">Top Rated</a></li>
+                    <li><a href="#recommended" class="hover:text-red-500 scroll-link">Recommended</a></li>
+                </ul>
+            </div>
+    
+            <!-- Social Media -->
+            <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+                <h3 class="text-lg font-bold mb-2">Follow Us</h3>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-red-500 text-2xl"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-red-500 text-2xl"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-red-500 text-2xl"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-red-500 text-2xl"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+    
+            <!-- Newsletter -->
+            <div class="md:col-span-3 text-center mt-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
+                <h3 class="text-lg font-bold mb-2">Subscribe for Updates</h3>
+                <form class="flex justify-center">
+                    <input type="email" placeholder="Enter your email" class="p-2 rounded-l bg-gray-800 text-white outline-none">
+                    <button class="bg-red-600 p-2 rounded-r font-bold hover:bg-red-700">Subscribe</button>
+                </form>
+            </div>
+    
+            <!-- Legal & Policies -->
+            <div class="md:col-span-3 text-center mt-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="800">
+                <h3 class="text-lg font-bold mb-2">Legal & Policies</h3>
+                <p class="text-gray-400 text-sm">
+                    <a href="#" class="hover:text-red-500">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-red-500">Terms & Conditions</a> | 
+                    <a href="#" class="hover:text-red-500">Cookie Policy</a>
+                </p>
+                <p class="text-gray-400 text-sm mt-2">
+                    Movieflix does not host or stream any copyrighted content. We provide recommendations and movie-related information for entertainment purposes. All movie posters, images, and trademarks belong to their respective owners.
+                </p>
+                <p class="text-gray-400 text-sm mt-2">
+                    By using Movieflix, you agree to our Terms & Conditions and acknowledge our use of cookies for a better user experience. For any concerns, contact us at 
+                    <a href="mailto:support@movieflix.com" class="hover:text-red-500">support@movieflix.com</a>.
+                </p>
+            </div>
+    
+            <!-- Contact & Copyright -->
+            <div class="md:col-span-3 text-center mt-4 text-gray-400 text-sm" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1000">
+                <p>Contact: <a href="mailto:support@movieflix.com" class="hover:text-red-500">support@movieflix.com</a> | <a href="tel:+91 6303351711" class="hover:text-red-500">+91 630 335 1711</a></p>
+                <p class="mt-2">© 2025 Movieflix. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('.scroll-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    window.scrollTo({ top: targetSection.offsetTop - 50, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+    
+    <!-- AOS Initialization -->
+    <script>
+        AOS.init({
+            once: true, // Whether animation should happen only once - while scrolling down
+            duration: 1000 // Duration of animations
+        });
+    </script>
+    
+    <script>
+        function goToCategory() {
+            let category = document.getElementById("categorySelect").value;
+            if (category) {
+                window.location.href = category;
+            }
+        }
+    </script>
+</body>
+</html>

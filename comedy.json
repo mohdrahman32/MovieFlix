@@ -1,0 +1,317 @@
+[
+    {
+        "title": "The Grand Budapest Hotel",
+        "year": 2014,
+        "industry": "Hollywood",
+        "genre": ["Comedy", "Adventure", "Drama"],
+        "lead_cast": ["Ralph Fiennes", "Tony Revolori", "F. Murray Abraham"],
+        "director": "Wes Anderson",
+        "notable_aspects": [
+            "Distinctive Wes Anderson style with humor and heart",
+            "Won four Academy Awards, including Best Original Screenplay",
+            "Known for its vibrant visuals and ensemble cast"
+        ],
+        "box_office": "$174 million worldwide, appreciated in India for its unique comedy",
+        "image": "comedy/the_grand_budapest_hotel.webp",
+        "ott_link": "https://www.primevideo.com/detail/The-Grand-Budapest-Hotel/0TAE28ODQBM7KIKVEYS9HWN0CX",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "1h 39min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "The Big Short",
+        "year": 2015,
+        "industry": "Hollywood",
+        "genre": ["Comedy", "Drama", "Biography"],
+        "lead_cast": ["Christian Bale", "Steve Carell", "Ryan Gosling"],
+        "director": "Adam McKay",
+        "notable_aspects": [
+            "Explains the 2008 financial crisis with humor",
+            "Received widespread acclaim for making complex finance understandable",
+            "Won the Oscar for Best Adapted Screenplay"
+        ],
+        "box_office": "$133 million worldwide, its humor resonated well in India",
+        "image": "comedy/the_big_short.jpg",
+        "ott_link": "https://www.primevideo.com/detail/The-Big-Short/0N0FY4VKGL4KBREB65TAOPPHRX",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 10min",
+            "features": ["HDR", "Dolby Digital"]
+        }
+    },
+    {
+        "title": "Deadpool",
+        "year": 2016,
+        "industry": "Hollywood",
+        "genre": ["Comedy", "Action", "Adventure"],
+        "lead_cast": ["Ryan Reynolds", "Morena Baccarin", "T.J. Miller"],
+        "director": "Tim Miller",
+        "notable_aspects": [
+            "Broke the fourth wall with its meta-humor",
+            "Ryan Reynolds' portrayal of Deadpool was critically acclaimed",
+            "Changed the landscape for R-rated superhero films"
+        ],
+        "box_office": "$783 million worldwide, massive hit in India for its irreverent humor",
+        "image": "comedy/deadpool.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Deadpool-4K-UHD/0GM6BBN1M2GHBJFH84FR0IDGOV",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "1h 48min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Thor: Ragnarok",
+        "year": 2017,
+        "industry": "Hollywood",
+        "genre": ["Comedy", "Action", "Adventure"],
+        "lead_cast": ["Chris Hemsworth", "Tom Hiddleston", "Cate Blanchett"],
+        "director": "Taika Waititi",
+        "notable_aspects": [
+            "Brought a comedic tone to the Thor franchise",
+            "Taika Waititi's humor was a refreshing change",
+            "One of the highest-rated Marvel films"
+        ],
+        "box_office": "$854 million worldwide, popular in India for its humor",
+        "image": "comedy/thor_ragnarok.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Thor-Ragnarok-Theatrical-Version/0HSX3MMRMNNNS8BCY1JNE23LPL",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 10min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Game Night",
+        "year": 2018,
+        "industry": "Hollywood",
+        "genre": ["Comedy", "Action", "Mystery"],
+        "lead_cast": ["Jason Bateman", "Rachel McAdams", "Kyle Chandler"],
+        "director": "John Francis Daley, Jonathan Goldstein",
+        "notable_aspects": [
+            "A comedy about a game night that turns into a real-life mystery",
+            "Praised for its clever writing and comedic timing",
+            "A blend of humor, action, and suspense"
+        ],
+        "box_office": "$117 million worldwide, well-received in India for its humor",
+        "image": "comedy/game_night.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Game-Night/0QG1W5AAM0RDOT95R9RN1C8779",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "1h 40min",
+            "features": ["HDR", "Dolby Digital"]
+        }
+    },
+    {
+        "title": "Golmaal: Fun Unlimited",
+        "year": 2006,
+        "industry": "Bollywood",
+        "genre": ["Comedy", "Drama"],
+        "lead_cast": ["Ajay Devgn", "Arshad Warsi", "Sharman Joshi"],
+        "director": "Rohit Shetty",
+        "notable_aspects": [
+            "The first film in the Golmaal franchise",
+            "Introduced the concept of a group of friends with comic mishaps",
+            "Known for its humor and character dynamics"
+        ],
+        "box_office": "Over ₹40 crore, a commercial success for its time",
+        "image": "comedy/golmaal_fun_unlimited.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Golmaal-Fun-Unlimited/0O2SYVQ2FR0SFS8E1W1CEJDQ4T",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 16min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Housefull",
+        "year": 2010,
+        "industry": "Bollywood",
+        "genre": ["Comedy", "Romance"],
+        "lead_cast": ["Akshay Kumar", "Riteish Deshmukh", "Lara Dutta"],
+        "director": "Sajid Khan",
+        "notable_aspects": [
+            "First film in the Housefull series",
+            "Focuses on a series of comedic misunderstandings",
+            "Known for its slapstick humor and ensemble cast"
+        ],
+        "box_office": "Over ₹114 crore, one of the highest-grossing films of 2010 in India",
+        "image": "comedy/housefull.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Housefull/0OBDNEST2TTP3NJ6KMVSKVUSUR",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 15min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "All The Best: Fun Begins",
+        "year": 2009,
+        "industry": "Bollywood",
+        "genre": ["Comedy", "Drama"],
+        "lead_cast": ["Ajay Devgn", "Sanjay Dutt", "Fardeen Khan"],
+        "director": "Rohit Shetty",
+        "notable_aspects": [
+            "A comedy of errors involving mistaken identities",
+            "A blend of slapstick and situational comedy",
+            "Known for its comedic performances, especially by Sanjay Dutt"
+        ],
+        "box_office": "Over ₹64 crore, a hit in 2009",
+        "image": "comedy/all_the_best.jpg",
+        "ott_link": "https://www.primevideo.com/detail/All-The-Best-Fun-Begins/0PZ29FZA4Y6US2IG6510DF7DWB",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 24min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Dream Girl",
+        "year": 2019,
+        "industry": "Bollywood",
+        "genre": ["Comedy", "Romance"],
+        "lead_cast": ["Ayushmann Khurrana", "Nushrat Bharucha"],
+        "director": "Raaj Shaandilyaa",
+        "notable_aspects": [
+            "Unique premise of a man impersonating a woman on phone calls",
+            "Ayushmann Khurrana's versatile acting",
+            "Praised for its humor and catchy dialogues"
+        ],
+        "box_office": "Over ₹143 crore, a sleeper hit with strong word-of-mouth",
+        "image": "comedy/dream_girl.jpg",
+        "ott_link": "https://www.jiotv.com/full-movie/dream-girl/08e18bd7e6ce56859472ad84d9968b01",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 12min",
+            "features": ["HDR", "Dolby Digital"]
+        }
+    },
+    {
+        "title": "Bala",
+        "year": 2019,
+        "industry": "Bollywood",
+        "genre": ["Comedy", "Drama"],
+        "lead_cast": ["Ayushmann Khurrana", "Bhumi Pednekar", "Yami Gautam"],
+        "director": "Amar Kaushik",
+        "notable_aspects": [
+            "Tackles the issue of baldness with humor",
+            "Ayushmann Khurrana's comic timing and performance",
+            "A mix of comedy, social commentary, and romance"
+        ],
+        "box_office": "Over ₹109 crore, another hit for Ayushmann in 2019",
+        "image": "comedy/bala.jpg",
+        "ott_link": "https://www.hotstar.com/in/movies/bala/1260016419",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 12min",
+            "features": ["HDR", "Dolby Digital"]
+        }
+    },
+    {
+        "title": "F2: Fun and Frustration",
+        "year": 2019,
+        "industry": "Tollywood",
+        "genre": ["Comedy"],
+        "lead_cast": ["Venkatesh Daggubati", "Varun Tej", "Tamannaah Bhatia", "Mehreen Pirzada"],
+        "director": "Anil Ravipudi",
+        "notable_aspects": [
+            "A sequel to 'Fidaa', focusing on two married couples and their humorous escapades",
+            "Known for its light-hearted humor and situational comedy",
+            "Was a major commercial success, particularly for its comedy"
+        ],
+        "box_office": "Achieved a profit of 50 crores on a pre-release business of 34.5 crores",
+        "image": "comedy/f2_fun_and_frustration.jpg",
+        "ott_link": "https://www.primevideo.com/detail/F2---Fun-and-Frustration/0FWPAKHU2KHTXEN89Q0Q52YJZ3",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 28min",
+            "features": ["Subtitles"]
+        }
+    },
+    {
+        "title": "Geetha Govindam",
+        "year": 2018,
+        "industry": "Tollywood",
+        "genre": ["Comedy", "Romance"],
+        "lead_cast": ["Vijay Deverakonda", "Rashmika Mandanna"],
+        "director": "Parasuram",
+        "notable_aspects": [
+            "A romantic comedy where the hero tries to win back his love after a misunderstanding",
+            "Became a cultural phenomenon with its dialogues and music",
+            "Highly praised for its humor and chemistry between leads"
+        ],
+        "box_office": "Made a profit of 55.43 crores with a pre-release business of 15 crores",
+        "image": "comedy/geetha_govindam.jpg",
+        "ott_link": "https://www.zee5.com/movies/details/geetha-govindam/0-0-7463",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 22min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Ala Vaikunthapurramuloo",
+        "year": 2020,
+        "industry": "Tollywood",
+        "genre": ["Comedy", "Drama", "Action"],
+        "lead_cast": ["Allu Arjun", "Pooja Hegde", "Tabu", "Jayaram"],
+        "director": "Trivikram Srinivas",
+        "notable_aspects": [
+            "A story of mistaken identity with a mix of drama and comedy",
+            "Allu Arjun's performance was widely appreciated",
+            "Notable for its catchy music and comedic sequences"
+        ],
+        "box_office": "One of the highest-grossing Telugu films with a profit of 120 crores",
+        "image": "comedy/ala_vaikunthapurramuloo.jpg",
+        "ott_link": "https://www.netflix.com/in/title/81252029",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 43min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Sardaar Gabbar Singh",
+        "year": 2016,
+        "industry": "Tollywood",
+        "genre": ["Comedy", "Action"],
+        "lead_cast": ["Pawan Kalyan", "Kajal Aggarwal"],
+        "director": "K. S. Ravindra",
+        "notable_aspects": [
+            "Sequel to 'Gabbar Singh', known for its action-comedy mix",
+            "Pawan Kalyan's comic timing and action sequences",
+            "Memorable for its dialogues and songs"
+        ],
+        "box_office": "Earned over 100 crores, making it a commercial hit",
+        "image": "comedy/sardaar_gabbar_singh.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Sardaar-Gabbar-Singh/0FO7LS87KSBJR6KXNBUP4FQ0T2",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 40min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Bhale Bhale Magadivoy",
+        "year": 2015,
+        "industry": "Tollywood",
+        "genre": ["Comedy", "Drama"],
+        "lead_cast": ["Nani", "Lavanya Tripathi"],
+        "director": "Maruthi Dasari",
+        "notable_aspects": [
+            "Story of a scientist with short-term memory loss falling in love",
+            "Nani's performance was critically acclaimed",
+            "Noted for its unique humor and emotional depth"
+        ],
+        "box_office": "A commercial success, appreciated for its comedic elements",
+        "image": "comedy/bhale_bhale_magadivoy.jpg",
+        "ott_link": "https://www.hotstar.com/in/movies/bhale-bhale-magadivoy/1000082953",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 20min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    }
+];

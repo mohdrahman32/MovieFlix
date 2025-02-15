@@ -1,0 +1,317 @@
+[
+    {
+        "title": "Avengers: Infinity War",
+        "year": 2018,
+        "industry": "Hollywood",
+        "genre": ["Action", "Adventure", "Science Fiction"],
+        "lead_cast": ["Robert Downey Jr.", "Chris Hemsworth", "Mark Ruffalo", "Scarlett Johansson", "Josh Brolin"],
+        "director": "Anthony Russo, Joe Russo",
+        "notable_aspects": [
+            "Culmination of the Marvel Cinematic Universe's Infinity Saga",
+            "Introduction of Thanos as the main antagonist",
+            "Epic scale with numerous superhero crossovers"
+        ],
+        "box_office": "Over $2 billion worldwide",
+        "image": "adventure/avengersinfinitywar.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Marvels-Avengers-Infinity-War/0JTDAMFQF938HK16LTN698UJ7I",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 29min",
+            "features": ["HDR", "Dolby Atmos", "X-Ray"]
+        }
+    },
+    {
+        "title": "The Jungle Book",
+        "year": 2016,
+        "industry": "Hollywood",
+        "genre": ["Adventure", "Drama", "Family"],
+        "lead_cast": ["Neel Sethi", "Bill Murray", "Ben Kingsley", "Idris Elba", "Scarlett Johansson"],
+        "director": "Jon Favreau",
+        "notable_aspects": [
+            "Live-action/CGI hybrid with stunning visual effects",
+            "Faithful adaptation of Rudyard Kipling's stories",
+            "Use of innovative technology for animal characters"
+        ],
+        "box_office": "Over $966 million worldwide",
+        "image": "adventure/thejunglebook.jpg",
+        "ott_link": "https://www.primevideo.com/detail/The-Jungle-Book/0OBCXJOKJQETSYJPKGA7B0YMVS",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "1h 46min",
+            "features": ["HDR", "Dolby Atmos", "X-Ray"]
+        }
+    },
+    {
+        "title": "Life of Pi",
+        "year": 2012,
+        "industry": "Hollywood",
+        "genre": ["Adventure", "Drama", "Fantasy"],
+        "lead_cast": ["Suraj Sharma", "Irrfan Khan", "Rafe Spall", "Tabu"],
+        "director": "Ang Lee",
+        "notable_aspects": [
+            "Visually stunning portrayal of the sea and its creatures",
+            "Adaptation of Yann Martel's bestselling novel",
+            "Exploration of faith, survival, and storytelling"
+        ],
+        "box_office": "Over $609 million worldwide",
+        "image": "adventure/lifeofpi.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Life-of-Pi/0MJAY4DQO3K8B63FQXKNBE17C5",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 7min",
+            "features": ["HDR", "Dolby Digital", "X-Ray"]
+        }
+    },
+    {
+        "title": "Jumanji: The Next Level",
+        "year": 2019,
+        "industry": "Hollywood",
+        "genre": ["Adventure", "Comedy", "Fantasy"],
+        "lead_cast": ["Dwayne Johnson", "Kevin Hart", "Jack Black", "Karen Gillan", "Danny DeVito", "Danny Glover"],
+        "director": "Jake Kasdan",
+        "notable_aspects": [
+            "Sequel to 'Jumanji: Welcome to the Jungle' with new gameplay elements",
+            "Introduction of new characters and body swaps",
+            "Continued success of the franchise with humor and adventure"
+        ],
+        "box_office": "Over $800 million worldwide",
+        "image": "adventure/jumanjinextlevel.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Jumanji-The-Next-Level-4K-UHD/0TEN87T2RS1AMP0IB8TFK1ERWV",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 3min",
+            "features": ["HDR", "Dolby Atmos", "X-Ray"]
+        }
+    },
+    {
+        "title": "Spider-Man: No Way Home",
+        "year": 2021,
+        "industry": "Hollywood",
+        "genre": ["Action", "Adventure", "Superhero"],
+        "lead_cast": ["Tom Holland", "Zendaya", "Benedict Cumberbatch", "Tobey Maguire", "Andrew Garfield"],
+        "director": "Jon Watts",
+        "notable_aspects": [
+            "Multiverse concept bringing back previous Spider-Man actors",
+            "Emotional reunion of different Spider-Men",
+            "Significant plot developments in the MCU"
+        ],
+        "box_office": "Over $1.8 billion worldwide",
+        "image": "adventure/spidermanwayhome.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Spider-Man-No-Way-Home/0K2K4N25VGA0GOABHNZ2AXJPF7",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 28min",
+            "features": ["HDR", "Dolby Atmos", "X-Ray"]
+        }
+    },
+    {
+        "title": "Shamshera",
+        "year": 2022,
+        "industry": "Bollywood",
+        "genre": ["Action", "Adventure", "Historical", "Drama"],
+        "lead_cast": ["Ranbir Kapoor", "Sanjay Dutt", "Vaani Kapoor"],
+        "director": "Karan Malhotra",
+        "notable_aspects": [
+            "Period drama set in the 19th century",
+            "Ranbir Kapoor in a double role",
+            "Action-packed sequences with a revenge plot"
+        ],
+        "box_office": "Underperformed at the box office",
+        "image": "adventure/shamshera.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Shamshera/0L1DA2J1NSMP0PGY4VEBV4OKNI",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 58min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Bajrangi Bhaijaan",
+        "year": 2015,
+        "industry": "Bollywood",
+        "genre": ["Drama", "Comedy", "Action"],
+        "lead_cast": ["Salman Khan", "Harshaali Malhotra", "Kareena Kapoor Khan", "Nawazuddin Siddiqui"],
+        "director": "Kabir Khan",
+        "notable_aspects": [
+            "Heartwarming story of a man helping a mute girl return home",
+            "Cross-border theme between India and Pakistan",
+            "Salman Khan's performance and the child actor's debut"
+        ],
+        "box_office": "Over $80 million worldwide, blockbuster hit",
+        "image": "adventure/bajrangibhaijaan.jpg",
+        "ott_link": "https://www.netflix.com/in/title/80065328",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 39min",
+            "features": ["Dolby Digital"]
+        }
+    },
+    {
+        "title": "Jagga Jasoos",
+        "year": 2017,
+        "industry": "Bollywood",
+        "genre": ["Adventure", "Comedy", "Musical"],
+        "lead_cast": ["Ranbir Kapoor", "Katrina Kaif", "Saurabh Shukla"],
+        "director": "Anurag Basu",
+        "notable_aspects": [
+            "Innovative narrative style with songs revealing plot points",
+            "Ranbir Kapoor's character is mute and stutters",
+            "Unique blend of mystery and musical elements"
+        ],
+        "box_office": "Commercially a disappointment",
+        "image": "adventure/jaggajasoos.jpg",
+        "ott_link": "https://www.netflix.com/in/title/80104130",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 42min",
+            "features": ["Dolby Digital"]
+        }
+    },
+    {
+        "title": "Zindagi Na Milegi Dobara",
+        "year": 2011,
+        "industry": "Bollywood",
+        "genre": ["Drama", "Comedy", "Romance"],
+        "lead_cast": ["Hrithik Roshan", "Farhan Akhtar", "Abhay Deol", "Katrina Kaif"],
+        "director": "Zoya Akhtar",
+        "notable_aspects": [
+            "Road trip movie set in Spain",
+            "Exploration of friendship and personal growth",
+            "Iconic scenes involving adventure sports"
+        ],
+        "box_office": "Successful at the box office",
+        "image": "adventure/zindaginamilegidobara.jpg",
+        "ott_link": "https://www.primevideo.com/-/hi/detail/Zindagi-Na-Milegi-Dobara/0PKHZ1YYPYOAK3BQAAFPX9O02B",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 35min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Krrish 3",
+        "year": 2013,
+        "industry": "Bollywood",
+        "genre": ["Action", "Science Fiction", "Superhero"],
+        "lead_cast": ["Hrithik Roshan", "Priyanka Chopra", "Kangana Ranaut", "Vivek Oberoi"],
+        "director": "Rakesh Roshan",
+        "notable_aspects": [
+            "Continues the superhero saga from 'Krrish'",
+            "Mix of advanced visual effects and traditional Bollywood storytelling",
+            "Introduction of a new antagonist with superpowers"
+        ],
+        "box_office": "One of the highest-grossing Indian films at the time",
+        "image": "adventure/krrish3.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Krrish-3/0SGKPC6JYHUN1RPGYBC7IVBYM8",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 30min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Karthikeya 2",
+        "year": 2022,
+        "industry": "Tollywood",
+        "genre": ["Mystery", "Action", "Adventure"],
+        "lead_cast": ["Nikhil Siddharth", "Anupama Parameshwaran", "Anupam Kher"],
+        "director": "Chandoo Mondeti",
+        "notable_aspects": [
+            "Sequel to the successful 'Karthikeya'",
+            "Incorporates elements of Indian mythology",
+            "Intriguing plot involving the hunt for Krishna's anklet"
+        ],
+        "box_office": "Box office success",
+        "image": "mystery/karthikeya2.jpg",
+        "ott_link": "https://www.zee5.com/movies/details/karthikeya-2/0-0-1z5227557",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 25min",
+            "features": ["Dolby Digital"]
+        }
+    },
+    {
+        "title": "Sye Raa Narasimha Reddy",
+        "year": 2019,
+        "industry": "Tollywood",
+        "genre": ["Action", "Biography", "Historical"],
+        "lead_cast": ["Chiranjeevi", "Amitabh Bachchan", "Nayanthara", "Tamannaah"],
+        "director": "Surender Reddy",
+        "notable_aspects": [
+            "Depicts the life of Uyyalawada Narasimha Reddy, a freedom fighter",
+            "High-budget production with extensive VFX",
+            "All-star cast from different Indian film industries"
+        ],
+        "box_office": "Performed well at the box office",
+        "image": "historical/syearaanarasimhareddy.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Sye-Raa-Narasimha-Reddy-Telugu/0LCSE0Z9QC54310NTVV7S10XFP",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 44min",
+            "features": ["Dolby Atmos", "HDR"]
+        }
+    },
+    {
+        "title": "Baahubali: The Beginning",
+        "year": 2015,
+        "industry": "Tollywood",
+        "genre": ["Action", "Fantasy", "Adventure"],
+        "lead_cast": ["Prabhas", "Rana Daggubati", "Anushka Shetty", "Tamannaah"],
+        "director": "S.S. Rajamouli",
+        "notable_aspects": [
+            "Epic storytelling set in ancient India",
+            "One of the highest-grossing Indian films",
+            "Innovative use of visual effects for its time"
+        ],
+        "box_office": "Over $100 million worldwide",
+        "image": "adventure/baahubali1.jpg",
+        "ott_link": "https://www.hotstar.com/in/movies/baahubali-the-beginning/1000074338",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 39min",
+            "features": ["Dolby Atmos", "HDR"]
+        }
+    },
+    {
+        "title": "Baahubali 2: The Conclusion",
+        "year": 2017,
+        "industry": "Tollywood",
+        "genre": ["Action", "Fantasy", "Adventure"],
+        "lead_cast": ["Prabhas", "Rana Daggubati", "Anushka Shetty", "Tamannaah"],
+        "director": "S.S. Rajamouli",
+        "notable_aspects": [
+            "Continues the saga from 'Baahubali: The Beginning'",
+            "Highest-grossing Indian film at the time of release",
+            "Answers the cliffhanger from the first movie"
+        ],
+        "box_office": "Over $170 million worldwide",
+        "image": "adventure/baahubali2.jpg",
+        "ott_link": "https://www.hotstar.com/in/movies/baahubali2-the-conclusion/1770016137",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 47min",
+            "features": ["Dolby Atmos", "HDR"]
+        }
+    },
+    {
+        "title": "Magadheera",
+        "year": 2009,
+        "industry": "Tollywood",
+        "genre": ["Action", "Fantasy", "Romance"],
+        "lead_cast": ["Ram Charan", "Srihari", "Kajal Aggarwal"],
+        "director": "S.S. Rajamouli",
+        "notable_aspects": [
+            "Epic narrative spanning two different eras",
+            "Advanced for its time in terms of action choreography and VFX",
+            "One of the highest-grossing Telugu films"
+        ],
+        "box_office": "Blockbuster success",
+        "image": "action/magadheera.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Magadheera/0MYXT5PYFPQDSRIK5VZGSZ0W4Y",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 35min",
+            "features": ["Dolby Digital"]
+        }
+    }
+]

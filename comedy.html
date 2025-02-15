@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movieflix - Comedy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.12.1/framer-motion.umd.min.js"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Additional horror effects */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background: url('comedy/image.png') no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(5px) brightness(0.3); /* Darken and blur the background for a creepy effect */
+        }
+        .movieflix-title {
+            position: relative;
+        }
+        
+        .movieflix-title::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.351) 50%, rgba(255, 255, 255, 0) 100%);
+            background-size: 200% 200%;
+            animation: waterDroplets 3s linear infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes waterDroplets {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .movie-card:hover .movie-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .movie-expanded {
+            position: fixed;
+            top: 8%;
+            left: 15%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 1200px;
+            z-index: 101;
+            background: rgba(0, 0, 0, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            box-shadow: 0 4px 8px rgb(141, 40, 40);
+        }
+        .movie-info-left {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .movie-info-left h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .movie-info-left .studio-name {
+            font-size: 1.5rem;
+            color: #fff;
+            display: block;
+        }
+        .movie-info-left .award {
+            color: #00d8ff;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .movie-info-left p, .movie-info-left ul {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        .movie-info-left ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .movie-info-left li {
+            margin-bottom: 5px;
+        }
+        .movie-info-left .meta-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .movie-info-left .meta-info span {
+            background-color: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+        .movie-info-left .genre {
+            color: #fff;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .movie-info-right {
+            flex: 1;
+            text-align: center;
+        }
+        .movie-info-right img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .blur-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 100;
+        }
+
+        .fun-fact-card {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(143, 43, 43, 0.885);
+        }
+        
+        .fun-fact-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .fun-fact-card p {
+            transition: color 0.3s ease;
+        }
+        
+        .fun-fact-card:hover p {
+            color: #ffffff; /* Change text color on hover if you want */
+        }
+        
+        /* Additional hover effects */
+        .fun-fact-card:hover {
+            animation: pulse 0.5s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+    <style>
+        /* Your existing styles */
+        .movie-card:hover .movie-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* AOS Customization */
+        [data-aos="fade-up"] {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        [data-aos="fade-up"].aos-animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header class="flex flex-col items-center justify-between p-4 bg-black sticky top-0 z-10" data-aos="fade-down">
+        <div class="mb-2">
+            <h1 class="text-4xl font-extrabold text-red-600 movieflix-title">MovieFlix</h1>
+        </div>
+        <h2 class="text-2xl font-bold text-red-600">Top Comedy Movies</h2>
+        <div class="flex w-full justify-between">
+            <button onclick="window.location.href='index.html'" class="text-white text-xl"><i class="fas fa-arrow-left"></i></button>
+            <div></div> <!-- Spacer for alignment -->
+        </div>
+    </header>
+    
+    <!-- Movie Grid -->
+    <section class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6" id="movieGrid" data-aos="fade-up">
+        <!-- Movie Cards will be dynamically added here -->
+    </section>
+
+    <!-- Expanded Movie View -->
+    <div id="expandedMovie" class="hidden movie-expanded" data-aos="zoom-in">
+    </div>
+
+    <section class="p-4" id="funFacts" data-aos="fade-up">
+        <h2 class="text-2xl font-bold mb-4 text-white">Fun Facts</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="fun-fact-card hover:shadow-lg cursor-pointer" data-aos="flip-up">
+                <p class="text-gray-300">"Housefull" was one of the first Bollywood films to use the concept of multiple marriages for comedy, leading to a series of hilarious mix-ups.</p>
+            </div>
+            <div class="fun-fact-card hover:shadow-lg cursor-pointer" data-aos="flip-up" data-aos-delay="100">
+                <p class="text-gray-300">"F2: Fun and Frustration" had a unique promotional gimmick where the lead actors dressed up as each other's characters for the trailer launch.</p>
+            </div>
+            <div class="fun-fact-card hover:shadow-lg cursor-pointer" data-aos="flip-up" data-aos-delay="200">
+                <p class="text-gray-300">In "Geetha Govindam", the phrase 'Butta Bomma' from the song became so popular that it was used in everyday conversations in Telugu states.</p>
+            </div>
+            <div class="fun-fact-card hover:shadow-lg cursor-pointer" data-aos="flip-up" data-aos-delay="300">
+                <p class="text-gray-300">"Deadpool" broke several records, including the most F-words in a Marvel movie, with 84 uses.</p>
+            </div>
+            <div class="fun-fact-card hover:shadow-lg cursor-pointer" data-aos="flip-up" data-aos-delay="400">
+                <p class="text-gray-300">"Ala Vaikunthapurramuloo" featured a dance sequence where Allu Arjun performed with his real-life father, Chiranjeevi, in a cameo, creating one of the most memorable scenes of the film.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const { motion } = window;
+            const grid = document.getElementById('movieGrid');
+            const expandedMovie = document.getElementById('expandedMovie');
+            const body = document.body;
+    
+            // JSON data
+            const movies = [
+                // Your JSON data here
+                {
+                    "title": "The Grand Budapest Hotel",
+                    "year": 2014,
+                    "industry": "Hollywood",
+                    "genre": ["Comedy", "Adventure", "Drama"],
+                    "lead_cast": ["Ralph Fiennes", "Tony Revolori", "F. Murray Abraham"],
+                    "director": "Wes Anderson",
+                    "notable_aspects": [
+                        "Distinctive Wes Anderson style with humor and heart",
+                        "Won four Academy Awards, including Best Original Screenplay",
+                        "Known for its vibrant visuals and ensemble cast"
+                    ],
+                    "box_office": "$174 million worldwide, appreciated in India for its unique comedy",
+                    "image": "comedy/the_grand_budapest_hotel.webp",
+                    "ott_link": "https://www.primevideo.com/detail/The-Grand-Budapest-Hotel/0TAE28ODQBM7KIKVEYS9HWN0CX",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "1h 39min",
+                        "features": ["HDR", "Dolby Atmos"]
+                    }
+                },
+                {
+                    "title": "The Big Short",
+                    "year": 2015,
+                    "industry": "Hollywood",
+                    "genre": ["Comedy", "Drama", "Biography"],
+                    "lead_cast": ["Christian Bale", "Steve Carell", "Ryan Gosling"],
+                    "director": "Adam McKay",
+                    "notable_aspects": [
+                        "Explains the 2008 financial crisis with humor",
+                        "Received widespread acclaim for making complex finance understandable",
+                        "Won the Oscar for Best Adapted Screenplay"
+                    ],
+                    "box_office": "$133 million worldwide, its humor resonated well in India",
+                    "image": "comedy/the_big_short.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/The-Big-Short/0N0FY4VKGL4KBREB65TAOPPHRX",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "2h 10min",
+                        "features": ["HDR", "Dolby Digital"]
+                    }
+                },
+                {
+                    "title": "Deadpool",
+                    "year": 2016,
+                    "industry": "Hollywood",
+                    "genre": ["Comedy", "Action", "Adventure"],
+                    "lead_cast": ["Ryan Reynolds", "Morena Baccarin", "T.J. Miller"],
+                    "director": "Tim Miller",
+                    "notable_aspects": [
+                        "Broke the fourth wall with its meta-humor",
+                        "Ryan Reynolds' portrayal of Deadpool was critically acclaimed",
+                        "Changed the landscape for R-rated superhero films"
+                    ],
+                    "box_office": "$783 million worldwide, massive hit in India for its irreverent humor",
+                    "image": "comedy/deadpool.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Deadpool-4K-UHD/0GM6BBN1M2GHBJFH84FR0IDGOV",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "1h 48min",
+                        "features": ["HDR", "Dolby Atmos"]
+                    }
+                },
+                {
+                    "title": "Thor: Ragnarok",
+                    "year": 2017,
+                    "industry": "Hollywood",
+                    "genre": ["Comedy", "Action", "Adventure"],
+                    "lead_cast": ["Chris Hemsworth", "Tom Hiddleston", "Cate Blanchett"],
+                    "director": "Taika Waititi",
+                    "notable_aspects": [
+                        "Brought a comedic tone to the Thor franchise",
+                        "Taika Waititi's humor was a refreshing change",
+                        "One of the highest-rated Marvel films"
+                    ],
+                    "box_office": "$854 million worldwide, popular in India for its humor",
+                    "image": "comedy/thor_ragnarok.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Thor-Ragnarok-Theatrical-Version/0HSX3MMRMNNNS8BCY1JNE23LPL",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "2h 10min",
+                        "features": ["HDR", "Dolby Atmos"]
+                    }
+                },
+                {
+                    "title": "Game Night",
+                    "year": 2018,
+                    "industry": "Hollywood",
+                    "genre": ["Comedy", "Action", "Mystery"],
+                    "lead_cast": ["Jason Bateman", "Rachel McAdams", "Kyle Chandler"],
+                    "director": "John Francis Daley, Jonathan Goldstein",
+                    "notable_aspects": [
+                        "A comedy about a game night that turns into a real-life mystery",
+                        "Praised for its clever writing and comedic timing",
+                        "A blend of humor, action, and suspense"
+                    ],
+                    "box_office": "$117 million worldwide, well-received in India for its humor",
+                    "image": "comedy/game_night.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Game-Night/0QG1W5AAM0RDOT95R9RN1C8779",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "1h 40min",
+                        "features": ["HDR", "Dolby Digital"]
+                    }
+                },
+                {
+                    "title": "Golmaal: Fun Unlimited",
+                    "year": 2006,
+                    "industry": "Bollywood",
+                    "genre": ["Comedy", "Drama"],
+                    "lead_cast": ["Ajay Devgn", "Arshad Warsi", "Sharman Joshi"],
+                    "director": "Rohit Shetty",
+                    "notable_aspects": [
+                        "The first film in the Golmaal franchise",
+                        "Introduced the concept of a group of friends with comic mishaps",
+                        "Known for its humor and character dynamics"
+                    ],
+                    "box_office": "Over ₹40 crore, a commercial success for its time",
+                    "image": "comedy/golmaal_fun_unlimited.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Golmaal-Fun-Unlimited/0O2SYVQ2FR0SFS8E1W1CEJDQ4T",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 16min",
+                        "features": ["Dolby Digital", "Subtitles"]
+                    }
+                },
+                {
+                    "title": "Housefull",
+                    "year": 2010,
+                    "industry": "Bollywood",
+                    "genre": ["Comedy", "Romance"],
+                    "lead_cast": ["Akshay Kumar", "Riteish Deshmukh", "Lara Dutta"],
+                    "director": "Sajid Khan",
+                    "notable_aspects": [
+                        "First film in the Housefull series",
+                        "Focuses on a series of comedic misunderstandings",
+                        "Known for its slapstick humor and ensemble cast"
+                    ],
+                    "box_office": "Over ₹114 crore, one of the highest-grossing films of 2010 in India",
+                    "image": "comedy/housefull.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Housefull/0OBDNEST2TTP3NJ6KMVSKVUSUR",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 15min",
+                        "features": ["Dolby Digital", "Subtitles"]
+                    }
+                },
+                {
+                    "title": "All The Best: Fun Begins",
+                    "year": 2009,
+                    "industry": "Bollywood",
+                    "genre": ["Comedy", "Drama"],
+                    "lead_cast": ["Ajay Devgn", "Sanjay Dutt", "Fardeen Khan"],
+                    "director": "Rohit Shetty",
+                    "notable_aspects": [
+                        "A comedy of errors involving mistaken identities",
+                        "A blend of slapstick and situational comedy",
+                        "Known for its comedic performances, especially by Sanjay Dutt"
+                    ],
+                    "box_office": "Over ₹64 crore, a hit in 2009",
+                    "image": "comedy/all_the_best.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/All-The-Best-Fun-Begins/0PZ29FZA4Y6US2IG6510DF7DWB",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 24min",
+                        "features": ["Dolby Digital", "Subtitles"]
+                    }
+                },
+                {
+                    "title": "Dream Girl",
+                    "year": 2019,
+                    "industry": "Bollywood",
+                    "genre": ["Comedy", "Romance"],
+                    "lead_cast": ["Ayushmann Khurrana", "Nushrat Bharucha"],
+                    "director": "Raaj Shaandilyaa",
+                    "notable_aspects": [
+                        "Unique premise of a man impersonating a woman on phone calls",
+                        "Ayushmann Khurrana's versatile acting",
+                        "Praised for its humor and catchy dialogues"
+                    ],
+                    "box_office": "Over ₹143 crore, a sleeper hit with strong word-of-mouth",
+                    "image": "comedy/dream_girl.jpg",
+                    "ott_link": "https://www.jiotv.com/full-movie/dream-girl/08e18bd7e6ce56859472ad84d9968b01",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "2h 12min",
+                        "features": ["HDR", "Dolby Digital"]
+                    }
+                },
+                {
+                    "title": "Bala",
+                    "year": 2019,
+                    "industry": "Bollywood",
+                    "genre": ["Comedy", "Drama"],
+                    "lead_cast": ["Ayushmann Khurrana", "Bhumi Pednekar", "Yami Gautam"],
+                    "director": "Amar Kaushik",
+                    "notable_aspects": [
+                        "Tackles the issue of baldness with humor",
+                        "Ayushmann Khurrana's comic timing and performance",
+                        "A mix of comedy, social commentary, and romance"
+                    ],
+                    "box_office": "Over ₹109 crore, another hit for Ayushmann in 2019",
+                    "image": "comedy/bala.jpg",
+                    "ott_link": "https://www.hotstar.com/in/movies/bala/1260016419",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "2h 12min",
+                        "features": ["HDR", "Dolby Digital"]
+                    }
+                },
+                {
+                    "title": "F2: Fun and Frustration",
+                    "year": 2019,
+                    "industry": "Tollywood",
+                    "genre": ["Comedy"],
+                    "lead_cast": ["Venkatesh Daggubati", "Varun Tej", "Tamannaah Bhatia", "Mehreen Pirzada"],
+                    "director": "Anil Ravipudi",
+                    "notable_aspects": [
+                        "A sequel to 'Fidaa', focusing on two married couples and their humorous escapades",
+                        "Known for its light-hearted humor and situational comedy",
+                        "Was a major commercial success, particularly for its comedy"
+                    ],
+                    "box_office": "Achieved a profit of 50 crores on a pre-release business of 34.5 crores",
+                    "image": "comedy/f2_fun_and_frustration.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/F2---Fun-and-Frustration/0FWPAKHU2KHTXEN89Q0Q52YJZ3",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 28min",
+                        "features": ["Subtitles"]
+                    }
+                },
+                {
+                    "title": "Geetha Govindam",
+                    "year": 2018,
+                    "industry": "Tollywood",
+                    "genre": ["Comedy", "Romance"],
+                    "lead_cast": ["Vijay Deverakonda", "Rashmika Mandanna"],
+                    "director": "Parasuram",
+                    "notable_aspects": [
+                        "A romantic comedy where the hero tries to win back his love after a misunderstanding",
+                        "Became a cultural phenomenon with its dialogues and music",
+                        "Highly praised for its humor and chemistry between leads"
+                    ],
+                    "box_office": "Made a profit of 55.43 crores with a pre-release business of 15 crores",
+                    "image": "comedy/geetha_govindam.jpg",
+                    "ott_link": "https://www.zee5.com/movies/details/geetha-govindam/0-0-7463",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "2h 22min",
+                        "features": ["HDR", "Dolby Atmos"]
+                    }
+                },
+                {
+                    "title": "Ala Vaikunthapurramuloo",
+                    "year": 2020,
+                    "industry": "Tollywood",
+                    "genre": ["Comedy", "Drama", "Action"],
+                    "lead_cast": ["Allu Arjun", "Pooja Hegde", "Tabu", "Jayaram"],
+                    "director": "Trivikram Srinivas",
+                    "notable_aspects": [
+                        "A story of mistaken identity with a mix of drama and comedy",
+                        "Allu Arjun's performance was widely appreciated",
+                        "Notable for its catchy music and comedic sequences"
+                    ],
+                    "box_office": "One of the highest-grossing Telugu films with a profit of 120 crores",
+                    "image": "comedy/ala_vaikunthapurramuloo.jpg",
+                    "ott_link": "https://www.netflix.com/in/title/81252029",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "2h 43min",
+                        "features": ["HDR", "Dolby Atmos"]
+                    }
+                },
+                {
+                    "title": "Sardaar Gabbar Singh",
+                    "year": 2016,
+                    "industry": "Tollywood",
+                    "genre": ["Comedy", "Action"],
+                    "lead_cast": ["Pawan Kalyan", "Kajal Aggarwal"],
+                    "director": "K. S. Ravindra",
+                    "notable_aspects": [
+                        "Sequel to 'Gabbar Singh', known for its action-comedy mix",
+                        "Pawan Kalyan's comic timing and action sequences",
+                        "Memorable for its dialogues and songs"
+                    ],
+                    "box_office": "Earned over 100 crores, making it a commercial hit",
+                    "image": "comedy/sardaar_gabbar_singh.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Sardaar-Gabbar-Singh/0FO7LS87KSBJR6KXNBUP4FQ0T2",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 40min",
+                        "features": ["Dolby Digital", "Subtitles"]
+                    }
+                },
+                {
+                    "title": "Bhale Bhale Magadivoy",
+                    "year": 2015,
+                    "industry": "Tollywood",
+                    "genre": ["Comedy", "Drama"],
+                    "lead_cast": ["Nani", "Lavanya Tripathi"],
+                    "director": "Maruthi Dasari",
+                    "notable_aspects": [
+                        "Story of a scientist with short-term memory loss falling in love",
+                        "Nani's performance was critically acclaimed",
+                        "Noted for its unique humor and emotional depth"
+                    ],
+                    "box_office": "A commercial success, appreciated for its comedic elements",
+                    "image": "comedy/bhale_bhale_magadivoy.jpg",
+                    "ott_link": "https://www.hotstar.com/in/movies/bhale-bhale-magadivoy/1000082953",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 20min",
+                        "features": ["Dolby Digital", "Subtitles"]
+                    }
+                }
+            ];
+    
+            // Initialize AOS
+            AOS.init({
+                duration: 1000, // Duration of animation
+                once: true, // Whether animation should happen only once - during the first scroll
+            });
+
+            // Generate movie cards
+            movies.forEach(movie => {
+                const card = document.createElement('div');
+                card.className = 'relative movie-card bg-gray-900 rounded-lg overflow-hidden group';
+                card.setAttribute('data-aos', 'fade-up'); // AOS effect for each card
+                card.innerHTML = `
+                    <img src="${movie.image}" class="w-full h-full object-cover group-hover:opacity-75 transition lazyload">
+                    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 p-4 opacity-0 transform translate-y-6 transition movie-info">
+                        <h3 class="text-lg font-bold">${movie.title}</h3>
+                        <p class="text-sm">⭐ ${movie.year}</p>
+                        <button class="bg-red-600 text-white px-3 py-1 rounded mt-2 learn-more">Learn More</button>
+                    </div>
+                `;
+                card.querySelector('.learn-more').addEventListener('click', () => showMovieDetails(movie));
+                grid.appendChild(card);
+            });
+    
+            function showMovieDetails(movie) {
+                // Blur background
+                const blurElement = document.createElement('div');
+                blurElement.className = 'blur-background';
+                body.appendChild(blurElement);
+    
+                // Determine if the movie has any awards
+                const award = movie.award ? `<span class="award">${movie.award}</span>` : '';
+    
+                // Dynamically generate the technical details
+                let techDetailsHtml = '';
+                if (movie.technical_details) {
+                    techDetailsHtml += `<span>${movie.technical_details.resolution}</span>`;
+                    techDetailsHtml += `<span>${movie.technical_details.duration}</span>`;
+                    movie.technical_details.features.forEach(feature => {
+                        techDetailsHtml += `<span>${feature}</span>`;
+                    });
+                }
+    
+                expandedMovie.innerHTML = `
+                    <div class="movie-info-left" data-aos="fade-right">
+                        <h2>${movie.title}</h2>
+                        ${award}
+                        <p>${movie.year} | ${movie.industry} | ${movie.director}</p>
+                        <p>${movie.lead_cast.join(', ')}</p>
+                        <p>${movie.box_office}</p>
+                        <div class="meta-info">
+                            ${techDetailsHtml}
+                        </div>
+                        <p class="genre">${movie.genre.join(' • ')}</p>
+                        <p>${movie.notable_aspects.join('. ')}</p>
+                        <a href="${movie.ott_link}" target="_blank" class="bg-red-600 text-white px-3 py-1 rounded mt-2 inline-block">Watch Now</a>
+                        <button onclick="window.location.href='comedy.html'" class="bg-gray-600 text-white px-3 py-1 rounded mt-2 ml-2">Close</button>
+                    </div>
+                    <div class="movie-info-right" data-aos="fade-left">
+                        <img src="${movie.image}" alt="${movie.title}">
+                    </div>
+                `;
+                expandedMovie.style.display = 'flex';
+                motion.animate(expandedMovie, { scale: [0.8, 1] }, { duration: 0.5 });
+            }
+    
+            function closeExpandedView() {
+                const blurElement = document.querySelector('.blur-background');
+                if (blurElement) {
+                    blurElement.remove();
+                }
+                expandedMovie.style.display = 'none';
+            }
+    
+            // Initial animation for movie cards
+            document.querySelectorAll(".movie-card").forEach(card => {
+                motion.animate(card, { scale: [0.9, 1] }, { duration: 0.5 });
+            });
+        });
+    </script>
+</body>
+</html>

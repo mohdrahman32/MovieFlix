@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movieflix - Biopics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.12.1/framer-motion.umd.min.js"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Additional horror effects */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background: url('thriller/image.png') no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(5px) brightness(0.3); /* Darken and blur the background for a creepy effect */
+        }
+        .movieflix-title {
+            position: relative;
+        }
+        
+        .movieflix-title::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.351) 50%, rgba(255, 255, 255, 0) 100%);
+            background-size: 200% 200%;
+            animation: waterDroplets 3s linear infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes waterDroplets {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .movie-card:hover .movie-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .movie-expanded {
+            position: fixed;
+            top: 8%;
+            left: 15%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 1200px;
+            z-index: 101;
+            background: rgba(0, 0, 0, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            box-shadow: 0 4px 8px rgb(141, 40, 40);
+        }
+        .movie-info-left {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .movie-info-left h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .movie-info-left .studio-name {
+            font-size: 1.5rem;
+            color: #fff;
+            display: block;
+        }
+        .movie-info-left .award {
+            color: #00d8ff;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .movie-info-left p, .movie-info-left ul {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        .movie-info-left ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .movie-info-left li {
+            margin-bottom: 5px;
+        }
+        .movie-info-left .meta-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .movie-info-left .meta-info span {
+            background-color: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+        .movie-info-left .genre {
+            color: #fff;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .movie-info-right {
+            flex: 1;
+            text-align: center;
+        }
+        .movie-info-right img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .blur-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 100;
+        }
+
+        .fun-fact-card {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(143, 43, 43, 0.885);
+        }
+        
+        .fun-fact-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .fun-fact-card p {
+            transition: color 0.3s ease;
+        }
+        
+        .fun-fact-card:hover p {
+            color: #ffffff; /* Change text color on hover if you want */
+        }
+        
+        /* Additional hover effects */
+        .fun-fact-card:hover {
+            animation: pulse 0.5s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+    <style>
+        /* Your existing styles */
+        .movie-card:hover .movie-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* AOS Customization */
+        [data-aos="fade-up"] {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        [data-aos="fade-up"].aos-animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header class="flex flex-col items-center justify-between p-4 bg-black sticky top-0 z-10" data-aos="fade-down">
+        <div class="mb-2">
+            <h1 class="text-4xl font-extrabold text-red-600 movieflix-title">MovieFlix</h1>
+        </div>
+        <h2 class="text-2xl font-bold text-red-600">Top Biopics Movies</h2>
+        <div class="flex w-full justify-between">
+            <button onclick="window.location.href='index.html'" class="text-white text-xl"><i class="fas fa-arrow-left"></i></button>
+            <div></div> <!-- Spacer for alignment -->
+        </div>
+    </header>
+    
+    <!-- Movie Grid -->
+    <section class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6" id="movieGrid" data-aos="fade-up">
+        <!-- Movie Cards will be dynamically added here -->
+    </section>
+
+    <!-- Expanded Movie View -->
+    <div id="expandedMovie" class="hidden movie-expanded" data-aos="zoom-in">
+    </div>
+
+    <section class="p-4" id="biographyFacts" data-aos="fade-up">
+        <h2 class="text-2xl font-bold mb-4 text-white">Biography Trivia</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="fun-fact-card hover:shadow-lg cursor-pointer" data-aos="flip-up">
+                <p class="text-gray-300">"Bohemian Rhapsody" brought the life of Freddie Mercury and Queen to the screen, with Rami Malek's Oscar-winning portrayal capturing Mercury's charisma and the band's musical genius.</p>
+            </div>
+            <div class="fun-fact-card hover:shadow-lg cursor-pointer" data-aos="flip-up" data-aos-delay="100">
+                <p class="text-gray-300">"Shershaah" honors the bravery of Captain Vikram Batra during the Kargil War, with Sidharth Malhotra's dual role adding depth to the story of heroism and sacrifice.</p>
+            </div>
+            <div class="fun-fact-card hover:shadow-lg cursor-pointer" data-aos="flip-up" data-aos-delay="200">
+                <p class="text-gray-300">"Dangal" showcases the real-life story of Mahavir Singh Phogat training his daughters for wrestling success, a narrative of determination, family, and breaking gender norms in sports.</p>
+            </div>
+            <div class="fun-fact-card hover:shadow-lg cursor-pointer" data-aos="flip-up" data-aos-delay="300">
+                <p class="text-gray-300">"Major" is a tribute to Major Sandeep Unnikrishnan's valor during the 2008 Mumbai attacks, emphasizing not just military heroism but the personal sacrifices involved.</p>
+            </div>
+            <div class="fun-fact-card hover:shadow-lg cursor-pointer" data-aos="flip-up" data-aos-delay="400">
+                <p class="text-gray-300">"Mahanati" delves into the life of the legendary actress Savitri, with Keerthy Suresh's transformative performance shedding light on her contributions to Telugu cinema and personal struggles.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const { motion } = window;
+            const grid = document.getElementById('movieGrid');
+            const expandedMovie = document.getElementById('expandedMovie');
+            const body = document.body;
+    
+            // JSON data
+            const movies = [
+                // Your JSON data here
+                {
+                    "title": "The Pursuit of Happyness",
+                    "year": 2006,
+                    "industry": "Hollywood",
+                    "genre": ["Drama", "Biography"],
+                    "lead_cast": ["Will Smith", "Jaden Smith", "Thandiwe Newton"],
+                    "director": "Gabriele Muccino",
+                    "notable_aspects": [
+                        "Based on the true story of Chris Gardner",
+                        "Will Smith's emotionally charged performance",
+                        "Theme of perseverance against all odds"
+                    ],
+                    "box_office": "Over $300 million worldwide",
+                    "image": "biography/pursuitofhappyness.jpg",
+                    "ott_link": "https://www.netflix.com/ga/title/70044605",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "1h 57min",
+                        "features": ["Dolby Digital", "X-Ray"]
+                    }
+                },
+                {
+                    "title": "Bohemian Rhapsody",
+                    "year": 2018,
+                    "industry": "Hollywood",
+                    "genre": ["Biography", "Drama", "Music"],
+                    "lead_cast": ["Rami Malek", "Lucy Boynton", "Gwilym Lee"],
+                    "director": "Bryan Singer",
+                    "notable_aspects": [
+                        "Focuses on Freddie Mercury and Queen",
+                        "Rami Malek won an Oscar for his portrayal of Mercury",
+                        "Live Aid performance recreation was a highlight"
+                    ],
+                    "box_office": "Over $900 million worldwide",
+                    "image": "biography/bohemianrhapsody.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Bohemian-Rhapsody/0U486UZBDKV1YVPRE13TR97QK2",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "2h 14min",
+                        "features": ["HDR", "Dolby Atmos", "X-Ray"]
+                    }
+                },
+                {
+                    "title": "The Social Network",
+                    "year": 2010,
+                    "industry": "Hollywood",
+                    "genre": ["Biography", "Drama"],
+                    "lead_cast": ["Jesse Eisenberg", "Andrew Garfield", "Justin Timberlake"],
+                    "director": "David Fincher",
+                    "notable_aspects": [
+                        "Based on the founding of Facebook",
+                        "Aaron Sorkin's sharp dialogue",
+                        "Exploration of themes like friendship, betrayal, and ambition"
+                    ],
+                    "box_office": "Over $224 million worldwide",
+                    "image": "biography/socialnetwork.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/The-Social-Network/0NLVFVUNJ99P6T28VVKRRCK208",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 1min",
+                        "features": ["Dolby Digital", "X-Ray"]
+                    }
+                },
+                {
+                    "title": "A Beautiful Mind",
+                    "year": 2001,
+                    "industry": "Hollywood",
+                    "genre": ["Biography", "Drama"],
+                    "lead_cast": ["Russell Crowe", "Ed Harris", "Jennifer Connelly"],
+                    "director": "Ron Howard",
+                    "notable_aspects": [
+                        "Depicts the life of mathematician John Nash",
+                        "Russell Crowe's Oscar-winning performance",
+                        "Deals with themes of schizophrenia and genius"
+                    ],
+                    "box_office": "Over $313 million worldwide",
+                    "image": "biography/beautifulmind.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/A-Beautiful-Mind/0JUMWO71OQJ1V10AV42E9KLCEE",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 15min",
+                        "features": ["Dolby Digital", "X-Ray"]
+                    }
+                },
+                {
+                    "title": "The Wolf of Wall Street",
+                    "year": 2013,
+                    "industry": "Hollywood",
+                    "genre": ["Biography", "Crime", "Comedy"],
+                    "lead_cast": ["Leonardo DiCaprio", "Jonah Hill", "Margot Robbie"],
+                    "director": "Martin Scorsese",
+                    "notable_aspects": [
+                        "Based on Jordan Belfort's memoir",
+                        "A mix of humor and excess",
+                        "DiCaprio's energetic performance"
+                    ],
+                    "box_office": "Over $392 million worldwide",
+                    "image": "biography/wolfofwallstreet.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/The-Wolf-of-Wall-Street/0GQBG8Q6ZL5RUUKKOU6Q09X7QH",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "3h",
+                        "features": ["Dolby Atmos", "HDR", "X-Ray"]
+                    }
+                },
+                {
+                    "title": "Dangal",
+                    "year": 2016,
+                    "industry": "Bollywood",
+                    "genre": ["Biography", "Drama", "Sport"],
+                    "lead_cast": ["Aamir Khan", "Sakshi Tanwar", "Fatima Sana Shaikh"],
+                    "director": "Nitesh Tiwari",
+                    "notable_aspects": [
+                        "Based on the life of wrestler Mahavir Singh Phogat",
+                        "Aamir Khan's transformative role",
+                        "Story of empowering women in sports"
+                    ],
+                    "box_office": "Over ₹2,000 crore worldwide, one of the highest-grossing Indian films",
+                    "image": "biography/dangal.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Dangal/0IIOG10OTQ7YE1RZ3I202LHQUB",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "2h 41min",
+                        "features": ["HDR", "Dolby Atmos", "Subtitles"]
+                    }
+                },
+                {
+                    "title": "Sanju",
+                    "year": 2018,
+                    "industry": "Bollywood",
+                    "genre": ["Biography", "Drama"],
+                    "lead_cast": ["Ranbir Kapoor", "Paresh Rawal", "Manisha Koirala"],
+                    "director": "Rajkumar Hirani",
+                    "notable_aspects": [
+                        "Biopic of Sanjay Dutt",
+                        "Ranbir Kapoor's versatile performance",
+                        "Covers Dutt's life from his acting career to his legal troubles"
+                    ],
+                    "box_office": "Over ₹586 crore worldwide",
+                    "image": "biography/sanju.jpg",
+                    "ott_link": "https://www.netflix.com/in/title/81020508",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "2h 35min",
+                        "features": ["HDR", "Dolby Atmos", "Subtitles"]
+                    }
+                },
+                {
+                    "title": "Shershaah",
+                    "year": 2021,
+                    "industry": "Bollywood",
+                    "genre": ["Biography", "Action", "War", "Drama"],
+                    "lead_cast": ["Sidharth Malhotra", "Kiara Advani"],
+                    "director": "Vishnuvardhan",
+                    "notable_aspects": [
+                        "Biopic of Captain Vikram Batra, hero of the Kargil War",
+                        "Sidharth Malhotra plays a dual role as Vikram and his twin brother Vishal",
+                        "Emotional portrayal of love and patriotism"
+                    ],
+                    "box_office": "Directly released on Amazon Prime Video, not applicable",
+                    "image": "biography/shershaah.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Shershaah/0J3P7DO2UHT2IGF8UY24C2I94C",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "2h 15min",
+                        "features": ["HDR", "Dolby Atmos", "X-Ray"]
+                    }
+                },
+                {
+                    "title": "Bhaag Milkha Bhaag",
+                    "year": 2013,
+                    "industry": "Bollywood",
+                    "genre": ["Biography", "Drama", "Sport"],
+                    "lead_cast": ["Farhan Akhtar", "Sonam Kapoor", "Divya Dutta"],
+                    "director": "Rakeysh Omprakash Mehra",
+                    "notable_aspects": [
+                        "Based on the life of Milkha Singh, the 'Flying Sikh'",
+                        "Farhan Akhtar's physical transformation for the role",
+                        "Emotional journey of overcoming personal tragedy"
+                    ],
+                    "box_office": "Over ₹160 crore worldwide",
+                    "image": "biography/bhaagmilkhabhaag.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Bhaag-Milkha-Bhaag-English-Subtitled/0LL7BS8YJBZ46M7IECDLX2F4G0",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "3h 6min",
+                        "features": ["Dolby Digital", "Subtitles"]
+                    }
+                },
+                {
+                    "title": "Mary Kom",
+                    "year": 2014,
+                    "industry": "Bollywood",
+                    "genre": ["Biography", "Drama", "Sport"],
+                    "lead_cast": ["Priyanka Chopra", "Darshan Kumaar", "Sunil Thapa"],
+                    "director": "Omung Kumar",
+                    "notable_aspects": [
+                        "Biopic of boxer Mary Kom",
+                        "Priyanka Chopra's dedication to the role",
+                        "Highlights the struggle and success of a female athlete"
+                    ],
+                    "box_office": "Over ₹90 crore worldwide",
+                    "image": "biography/marykom.jpg",
+                    "ott_link": "https://www.netflix.com/in/title/80015785",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 2min",
+                        "features": ["Dolby Digital", "Subtitles"]
+                    }
+                },
+                {
+                    "title": "Mahanati",
+                    "year": 2018,
+                    "industry": "Tollywood",
+                    "genre": ["Biography", "Drama"],
+                    "lead_cast": ["Keerthy Suresh", "Dulquer Salmaan", "Vijay Deverakonda"],
+                    "director": "Nag Ashwin",
+                    "notable_aspects": [
+                        "Biopic of legendary actress Savitri",
+                        "Keerthy Suresh's award-winning performance",
+                        "Explores the golden era of Telugu cinema"
+                    ],
+                    "box_office": "Over ₹60 crore worldwide",
+                    "image": "biography/mahanati.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Mahanati-Telugu/0NU9CZBXP7L8ANFCYJG1D6G2WJ",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 57min",
+                        "features": ["Dolby Digital", "Subtitles"]
+                    }
+                },
+                {
+                    "title": "Mallesham",
+                    "year": 2019,
+                    "industry": "Tollywood",
+                    "genre": ["Biography", "Drama"],
+                    "lead_cast": ["Priyadarshi Pulikonda", "Ananya Nagalla"],
+                    "director": "Raj R",
+                    "notable_aspects": [
+                        "Depicts the life of Chintakindi Mallesham, who invented the Asu machine",
+                        "Focuses on innovation and the struggle against tradition",
+                        "A story of determination and social change"
+                    ],
+                    "box_office": "Modest box office performance but critically acclaimed",
+                    "image": "biography/mallesham.jpg",
+                    "ott_link": "https://www.sunnxt.com/telugu-movie-mallesham-2019/detail/194369",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 10min",
+                        "features": ["Dolby Digital", "Subtitles"]
+                    }
+                },
+                {
+                    "title": "Annamayya",
+                    "year": 1997,
+                    "industry": "Tollywood",
+                    "genre": ["Biography", "Musical", "Drama"],
+                    "lead_cast": ["Nagarjuna", "Ramya Krishnan", "Bhanupriya"],
+                    "director": "K. Raghavendra Rao",
+                    "notable_aspects": [
+                        "Based on the life of saint-poet Annamacharya",
+                        "Musical journey through devotional songs",
+                        "Nagarjuna's portrayal of the saint"
+                    ],
+                    "box_office": "Blockbuster hit at the time",
+                    "image": "biography/annamayya.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/Annamayya/0Q39L1TRLZKQQCJYDTZZ48HL13",
+                    "technical_details": {
+                        "resolution": "SD",
+                        "duration": "2h 30min",
+                        "features": ["Dolby Digital 5.1"]
+                    }
+                },
+                {
+                    "title": "Major",
+                    "year": 2022,
+                    "industry": "Tollywood",
+                    "genre": ["Biography", "Action", "Drama"],
+                    "lead_cast": ["Adivi Sesh", "Sobhita Dhulipala", "Saiee Manjrekar"],
+                    "director": "Sashi Kiran Tikka",
+                    "notable_aspects": [
+                        "Based on the life of Major Sandeep Unnikrishnan of the 2008 Mumbai attacks",
+                        "A tribute to the bravery of the Indian Army",
+                        "Adivi Sesh's dedicated performance"
+                    ],
+                    "box_office": "Commercial success",
+                    "image": "biography/major.jpg",
+                    "ott_link": "https://www.netflix.com/in/title/81242575",
+                    "technical_details": {
+                        "resolution": "4K",
+                        "duration": "2h 29min",
+                        "features": ["Dolby Atmos", "HDR", "Subtitles"]
+                    }
+                },
+                {
+                    "title": "NTR: Kathanayakudu",
+                    "year": 2019,
+                    "industry": "Tollywood",
+                    "genre": ["Biography", "Drama"],
+                    "lead_cast": ["Nandamuri Balakrishna", "Vidya Balan", "Rana Daggubati"],
+                    "director": "Krish Jagarlamudi",
+                    "notable_aspects": [
+                        "First part of a two-part biopic on N.T. Rama Rao",
+                        "Focuses on his early life and rise in politics",
+                        "Balakrishna's portrayal of his father"
+                    ],
+                    "box_office": "Mixed response at the box office",
+                    "image": "biography/ntrkathanayakudu.jpg",
+                    "ott_link": "https://www.primevideo.com/detail/NTR-Kathanayakudu/0IIGNTK9MKLKVTL1JVYK9NCQH5",
+                    "technical_details": {
+                        "resolution": "HD",
+                        "duration": "2h 11min",
+                        "features": ["Dolby Digital", "Subtitles"]
+                    }
+                }
+                
+            ];
+    
+            // Initialize AOS
+            AOS.init({
+                duration: 1000, // Duration of animation
+                once: true, // Whether animation should happen only once - during the first scroll
+            });
+
+            // Generate movie cards
+            movies.forEach(movie => {
+                const card = document.createElement('div');
+                card.className = 'relative movie-card bg-gray-900 rounded-lg overflow-hidden group';
+                card.setAttribute('data-aos', 'fade-up'); // AOS effect for each card
+                card.innerHTML = `
+                    <img src="${movie.image}" class="w-full h-full object-cover group-hover:opacity-75 transition lazyload">
+                    <div class="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 p-4 opacity-0 transform translate-y-6 transition movie-info">
+                        <h3 class="text-lg font-bold">${movie.title}</h3>
+                        <p class="text-sm">⭐ ${movie.year}</p>
+                        <button class="bg-red-600 text-white px-3 py-1 rounded mt-2 learn-more">Learn More</button>
+                    </div>
+                `;
+                card.querySelector('.learn-more').addEventListener('click', () => showMovieDetails(movie));
+                grid.appendChild(card);
+            });
+    
+            function showMovieDetails(movie) {
+                // Blur background
+                const blurElement = document.createElement('div');
+                blurElement.className = 'blur-background';
+                body.appendChild(blurElement);
+    
+                // Determine if the movie has any awards
+                const award = movie.award ? `<span class="award">${movie.award}</span>` : '';
+    
+                // Dynamically generate the technical details
+                let techDetailsHtml = '';
+                if (movie.technical_details) {
+                    techDetailsHtml += `<span>${movie.technical_details.resolution}</span>`;
+                    techDetailsHtml += `<span>${movie.technical_details.duration}</span>`;
+                    movie.technical_details.features.forEach(feature => {
+                        techDetailsHtml += `<span>${feature}</span>`;
+                    });
+                }
+    
+                expandedMovie.innerHTML = `
+                    <div class="movie-info-left" data-aos="fade-right">
+                        <h2>${movie.title}</h2>
+                        ${award}
+                        <p>${movie.year} | ${movie.industry} | ${movie.director}</p>
+                        <p>${movie.lead_cast.join(', ')}</p>
+                        <p>${movie.box_office}</p>
+                        <div class="meta-info">
+                            ${techDetailsHtml}
+                        </div>
+                        <p class="genre">${movie.genre.join(' • ')}</p>
+                        <p>${movie.notable_aspects.join('. ')}</p>
+                        <a href="${movie.ott_link}" target="_blank" class="bg-red-600 text-white px-3 py-1 rounded mt-2 inline-block">Watch Now</a>
+                        <button onclick="window.location.href='biography.html'" class="bg-gray-600 text-white px-3 py-1 rounded mt-2 ml-2">Close</button>
+                    </div>
+                    <div class="movie-info-right" data-aos="fade-left">
+                        <img src="${movie.image}" alt="${movie.title}">
+                    </div>
+                `;
+                expandedMovie.style.display = 'flex';
+                motion.animate(expandedMovie, { scale: [0.8, 1] }, { duration: 0.5 });
+            }
+    
+            function closeExpandedView() {
+                const blurElement = document.querySelector('.blur-background');
+                if (blurElement) {
+                    blurElement.remove();
+                }
+                expandedMovie.style.display = 'none';
+            }
+    
+            // Initial animation for movie cards
+            document.querySelectorAll(".movie-card").forEach(card => {
+                motion.animate(card, { scale: [0.9, 1] }, { duration: 0.5 });
+            });
+        });
+    </script>
+</body>
+</html>

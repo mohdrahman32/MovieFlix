@@ -1,0 +1,319 @@
+[
+    {
+        "title": "Mad Max: Fury Road",
+        "year": 2015,
+        "industry": "Hollywood",
+        "genre": ["Action", "Adventure", "Sci-Fi"],
+        "lead_cast": ["Tom Hardy", "Charlize Theron", "Nicholas Hoult"],
+        "director": "George Miller",
+        "notable_aspects": [
+            "High-intensity post-apocalyptic action",
+            "Incredible practical effects and stunts",
+            "Charlize Theron's iconic role as Furiosa"
+        ],
+        "box_office": "One of the most critically acclaimed action films of all time",
+        "image": "action/mad_max_fury_road.jpg",
+        "ott_link": "https://www.primevideo.com/region/eu/detail/Mad-Max-Fury-Road/0G9GAOJ4273C0PK4FCPXS4KEJF",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 0min",
+            "features": ["X-Ray", "HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "John Wick: Chapter 4",
+        "year": 2023,
+        "industry": "Hollywood",
+        "genre": ["Action", "Thriller", "Crime"],
+        "lead_cast": ["Keanu Reeves", "Donnie Yen", "Bill Skarsgård", "Laurence Fishburne"],
+        "director": "Chad Stahelski",
+        "notable_aspects": [
+            "Intense and breathtaking action sequences",
+            "Keanu Reeves’ best performance as John Wick",
+            "Global locations and expanded world-building",
+            "Longest and most action-packed film in the franchise"
+        ],
+        "box_office": "One of the highest-grossing John Wick films",
+        "image": "action/john_wick4.jpg",
+        "ott_link": "https://www.primevideo.com/detail/John-Wick-Chapter-4/0OPU861X5ZA4ETQFV906HPCQ1T",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 49min",
+            "features": ["X-Ray", "HDR", "Dolby Vision"]
+        }
+    },
+    {
+        "title": "The Dark Knight",
+        "year": 2008,
+        "industry": "Hollywood",
+        "genre": ["Action", "Crime", "Drama"],
+        "lead_cast": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
+        "director": "Christopher Nolan",
+        "notable_aspects": [
+            "Heath Ledger's legendary performance as the Joker",
+            "Dark and gripping storytelling",
+            "Intense action and practical effects"
+        ],
+        "box_office": "One of the highest-grossing and most critically acclaimed movies ever",
+        "image": "action/the_dark_knight.jpg",
+        "ott_link": "https://www.primevideo.com/detail/The-Dark-Knight/0QSTXR0EXWWYI4D3UGMLFM4A0Q",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 32min",
+            "features": ["X-Ray", "HDR", "5.1 Audio"]
+        }
+    },
+    {
+        "title": "Avengers: Endgame",
+        "year": 2019,
+        "industry": "Hollywood",
+        "genre": ["Action", "Superhero", "Sci-Fi"],
+        "lead_cast": ["Robert Downey Jr.", "Chris Evans", "Scarlett Johansson"],
+        "director": "Anthony Russo, Joe Russo",
+        "notable_aspects": [
+            "Epic conclusion to the Marvel Cinematic Universe’s Infinity Saga",
+            "Spectacular visual effects and action sequences",
+            "Emotional and memorable character arcs"
+        ],
+        "box_office": "Became the highest-grossing film of all time (temporarily)",
+        "image": "action/avengers_endgame.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Marvel-Studios-Avengers-Endgame/0OI091IRNAIWL6HY536UZ1JA6O",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "3h 2min",
+            "features": ["X-Ray", "HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Mission: Impossible – Fallout",
+        "year": 2018,
+        "industry": "Hollywood",
+        "genre": ["Action", "Spy", "Thriller"],
+        "lead_cast": ["Tom Cruise", "Henry Cavill", "Rebecca Ferguson"],
+        "director": "Christopher McQuarrie",
+        "notable_aspects": [
+            "Tom Cruise's insane real-life stunts",
+            "High-octane action sequences",
+            "Thrilling and complex spy storyline"
+        ],
+        "box_office": "One of the most successful entries in the Mission: Impossible franchise",
+        "image": "action/mission_impossible_fallout.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Mission-Impossible---Fallout/0TZZTTWNIKAGIPMCMEB0WOVKH5",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 27min",
+            "features": ["X-Ray", "HDR10", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "RRR",
+        "year": 2022,
+        "industry": "Tollywood",
+        "genre": ["Action", "Drama", "Period"],
+        "lead_cast": ["N.T. Rama Rao Jr.", "Ram Charan", "Alia Bhatt", "Ajay Devgn"],
+        "director": "S.S. Rajamouli",
+        "notable_aspects": [
+            "Epic action sequences and breathtaking visuals",
+            "High-energy performances from NTR and Ram Charan",
+            "Patriotic storyline with intense battle scenes"
+        ],
+        "box_office": "One of the highest-grossing Indian films of all time",
+        "image": "action/rrr.jpg",
+        "ott_link": "https://www.zee5.com/movies/details/rrr/0-0-1z5145092",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "3h 7min",
+            "features": ["HDR", "Dolby Vision", "5.1 Audio"]
+        }
+    },
+    {
+        "title": "Pushpa: The Rise",
+        "year": 2021,
+        "industry": "Tollywood",
+        "genre": ["Action", "Thriller", "Crime"],
+        "lead_cast": ["Allu Arjun", "Rashmika Mandanna", "Fahadh Faasil"],
+        "director": "Sukumar",
+        "notable_aspects": [
+            "Raw and rugged action sequences",
+            "Allu Arjun’s mass transformation and powerful performance",
+            "Gripping underworld smuggling story"
+        ],
+        "box_office": "A major commercial blockbuster in Indian cinema",
+        "image": "action/pushpa.jpg",
+        "ott_link": "https://www.primevideo.com/-/hi/detail/Pushpa-The-Rise-Telugu/0JSVEYV0WDR309IGE4QL8LJZEQ",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 59min",
+            "features": ["HDR", "X-Ray", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Baahubali 2: The Conclusion",
+        "year": 2017,
+        "industry": "Tollywood",
+        "genre": ["Action", "Fantasy", "Drama"],
+        "lead_cast": ["Prabhas", "Rana Daggubati", "Anushka Shetty", "Tamannaah"],
+        "director": "S.S. Rajamouli",
+        "notable_aspects": [
+            "Unmatched battle sequences and VFX",
+            "Prabhas vs. Rana Daggubati's intense rivalry",
+            "Historic action-packed storytelling"
+        ],
+        "box_office": "Highest-grossing Indian movie at the time of release",
+        "image": "action/baahubali2.jpg",
+        "ott_link": "https://www.hotstar.com/in/movies/baahubali-2-the-conclusion/1770016137",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "3h 35min",
+            "features": ["HDR", "Dolby Vision", "5.1 Audio"]
+        }
+    },
+    {
+        "title": "Saaho",
+        "year": 2019,
+        "industry": "Tollywood",
+        "genre": ["Action", "Thriller", "Crime"],
+        "lead_cast": ["Prabhas", "Shraddha Kapoor", "Jackie Shroff"],
+        "director": "Sujeeth",
+        "notable_aspects": [
+            "High-budget action extravaganza",
+            "Stylish chase sequences and shootouts",
+            "Massive scale of action comparable to Hollywood"
+        ],
+        "box_office": "One of the most expensive and high-grossing action films",
+        "image": "action/saaho.jpg",
+        "ott_link": "https://www.primevideo.com/-/te/detail/%E0%B0%B8%E0%B0%BE%E0%B0%B9%E0%B1%8B-%E0%B0%A4%E0%B1%86%E0%B0%B2%E0%B1%81%E0%B0%97%E0%B1%81/0L49BLL3L0VXO0MIC1EIK44ZOP",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 51min",
+            "features": ["HDR", "X-Ray", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Vikram",
+        "year": 2022,
+        "industry": "Tollywood",
+        "genre": ["Action", "Thriller", "Crime"],
+        "lead_cast": ["Kamal Haasan", "Vijay Sethupathi", "Fahadh Faasil"],
+        "director": "Lokesh Kanagaraj",
+        "notable_aspects": [
+            "High-intensity combat and gunfights",
+            "Power-packed performances from Kamal Haasan & Vijay Sethupathi",
+            "Connected to Lokesh Cinematic Universe (LCU)"
+        ],
+        "box_office": "One of the biggest blockbusters of 2022",
+        "image": "action/vikram.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Vikram/0G2AIFPPS926UHP3Y21IXVSWN7",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 53min",
+            "features": ["HDR", "X-Ray", "5.1 Audio"]
+        }
+    },
+    {
+        "title": "Tiger Zinda Hai",
+        "year": 2017,
+        "industry": "Bollywood",
+        "genre": ["Action", "Thriller", "Spy"],
+        "lead_cast": ["Salman Khan", "Katrina Kaif"],
+        "director": "Ali Abbas Zafar",
+        "notable_aspects": [
+            "Intense action sequences",
+            "Stunning cinematography",
+            "High-energy performances"
+        ],
+        "box_office": "One of the highest-grossing Bollywood films of 2017",
+        "image": "action/tiger2.jpg",
+        "ott_link": "https://www.primevideo.com/detail/0FSE8GW3LLYSQZK9HZ30BY9S2X/ref=atv_sr_fle_c_Tn74RA_1_1_1?sr=1-1&pageTypeIdSource=ASIN&pageTypeId=B07B4PL2Q8&qid=1739474993464",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 41min",
+            "features": ["HDR", "X-Ray", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "War",
+        "year": 2019,
+        "industry": "Bollywood",
+        "genre": ["Action", "Thriller"],
+        "lead_cast": ["Hrithik Roshan", "Tiger Shroff", "Vaani Kapoor"],
+        "director": "Siddharth Anand",
+        "notable_aspects": [
+            "High-octane action sequences",
+            "Stylish cinematography",
+            "Face-off between Hrithik Roshan and Tiger Shroff"
+        ],
+        "box_office": "One of the highest-grossing Bollywood films of 2019",
+        "image": "action/war.jpg",
+        "ott_link": "https://www.primevideo.com/detail/War-Hindi/0IE81NLJ76SMXNZFNXSO19XWRK",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 34min",
+            "features": ["HDR", "X-Ray", "Dolby Vision"]
+        }
+    },
+    {
+        "title": "Pathaan",
+        "year": 2023,
+        "industry": "Bollywood",
+        "genre": ["Action", "Thriller", "Spy"],
+        "lead_cast": ["Shah Rukh Khan", "Deepika Padukone", "John Abraham"],
+        "director": "Siddharth Anand",
+        "notable_aspects": [
+            "SRK's comeback in a power-packed role",
+            "High-budget action and VFX",
+            "Gripping storyline with a global scale"
+        ],
+        "box_office": "One of the highest-grossing Bollywood films of 2023",
+        "image": "action/pathaan.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Pathaan/0FIVK55HUFIIADBSNC585CZFDP",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 26min",
+            "features": ["HDR", "X-Ray", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Singham",
+        "year": 2011,
+        "industry": "Bollywood",
+        "genre": ["Action", "Drama"],
+        "lead_cast": ["Ajay Devgn", "Kajal Aggarwal", "Prakash Raj"],
+        "director": "Rohit Shetty",
+        "notable_aspects": [
+            "Powerful dialogues and intense action",
+            "Ajay Devgn's impactful performance",
+            "Rohit Shetty's signature action style"
+        ],
+        "box_office": "A massive success that led to a franchise",
+        "image": "action/singham.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Singham/0RE77SEVTH4RLGTXXM0WX40Z2R",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 24min",
+            "features": ["HDR", "X-Ray", "5.1 Audio"]
+        }
+    },
+    {
+        "title": "Dhoom 3",
+        "year": 2013,
+        "industry": "Bollywood",
+        "genre": ["Action", "Thriller", "Heist"],
+        "lead_cast": ["Aamir Khan", "Katrina Kaif", "Abhishek Bachchan", "Uday Chopra"],
+        "director": "Vijay Krishna Acharya",
+        "notable_aspects": [
+            "Aamir Khan in a dual role",
+            "High-speed chases and thrilling heist sequences",
+            "Visually spectacular action scenes"
+        ],
+        "box_office": "One of the highest-grossing Bollywood films of all time",
+        "image": "action/dhoom3.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Dhoom3/0HG12GK6BY9FSXJXU9D2N5AU61",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 52min",
+            "features": ["HDR", "X-Ray", "Dolby Atmos"]
+        }
+    }
+  ]
+  

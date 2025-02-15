@@ -1,0 +1,317 @@
+[
+    {
+        "title": "Avatar",
+        "year": 2009,
+        "industry": "Hollywood",
+        "genre": ["Sci-Fi", "Adventure", "Fantasy"],
+        "lead_cast": ["Sam Worthington", "Zoe Saldana", "Sigourney Weaver"],
+        "director": "James Cameron",
+        "notable_aspects": [
+            "Revolutionized 3D technology in cinema",
+            "Set on the lush alien world of Pandora",
+            "Highest-grossing film of all time when released"
+        ],
+        "box_office": "Over $2.7 billion worldwide, a monumental success",
+        "image": "scifi/avatar.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Avatar/0LCOF5S7YR0UEA8EYW31TA7OF7",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 42min",
+            "features": ["3D", "Dolby Atmos", "HDR"]
+        }
+    },
+    {
+        "title": "Interstellar",
+        "year": 2014,
+        "industry": "Hollywood",
+        "genre": ["Sci-Fi", "Adventure", "Drama"],
+        "lead_cast": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
+        "director": "Christopher Nolan",
+        "notable_aspects": [
+            "Explores complex concepts like relativity and wormholes",
+            "Features stunning visual effects and scientific accuracy",
+            "Hans Zimmer's score is considered iconic"
+        ],
+        "box_office": "Over $677 million worldwide, critically and commercially successful",
+        "image": "scifi/interstellar.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Interstellar/0PUNMGZEWOMYFKR1XIGOLTL2YM",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 49min",
+            "features": ["IMAX", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "The Matrix",
+        "year": 1999,
+        "industry": "Hollywood",
+        "genre": ["Sci-Fi", "Action"],
+        "lead_cast": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
+        "director": "The Wachowskis",
+        "notable_aspects": [
+            "Introduced bullet time effects to mainstream cinema",
+            "Explores themes of reality, freedom, and human control",
+            "Spawned a franchise and influenced numerous sci-fi films"
+        ],
+        "box_office": "Over $463 million worldwide, a cultural phenomenon",
+        "image": "scifi/the_matrix.jpg",
+        "ott_link": "https://www.primevideo.com/detail/The-Matrix/0SC64NC24QA7M9AFWBEK87WWS0",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 16min",
+            "features": ["Dolby Vision", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Jurassic Park",
+        "year": 1993,
+        "industry": "Hollywood",
+        "genre": ["Sci-Fi", "Adventure"],
+        "lead_cast": ["Sam Neill", "Laura Dern", "Jeff Goldblum"],
+        "director": "Steven Spielberg",
+        "notable_aspects": [
+            "Revolutionized the use of CGI in film",
+            "Brought dinosaurs to life in a believable way",
+            "Adapted from Michael Crichton's novel"
+        ],
+        "box_office": "Over $1 billion worldwide, adjusted for inflation among the highest grossing ever",
+        "image": "scifi/jurassic_park.jpg",
+        "ott_link": "https://www.hotstar.com/in/movies/jurassic-park/1971000492?utm_source=jiocinema",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 7min",
+            "features": ["Dolby Vision", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Gravity",
+        "year": 2013,
+        "industry": "Hollywood",
+        "genre": ["Sci-Fi", "Drama", "Thriller"],
+        "lead_cast": ["Sandra Bullock", "George Clooney"],
+        "director": "Alfonso Cuarón",
+        "notable_aspects": [
+            "Known for its groundbreaking visual effects and long takes in space",
+            "A story of survival in space after a disaster",
+            "Won multiple Oscars, including Best Director for Cuarón"
+        ],
+        "box_office": "Over $723 million worldwide, a technical and visual marvel",
+        "image": "scifi/gravity.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Gravity/0MW3B1AN9EBQN5F5825WH831MA",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "1h 31min",
+            "features": ["3D", "IMAX", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Mr. India",
+        "year": 1987,
+        "industry": "Bollywood",
+        "genre": ["Sci-Fi", "Action", "Comedy"],
+        "lead_cast": ["Anil Kapoor", "Sridevi", "Amrish Puri"],
+        "director": "Shekhar Kapur",
+        "notable_aspects": [
+            "Introduced the concept of invisibility in Indian cinema",
+            "Iconic villain Mogambo played by Amrish Puri",
+            "Memorable for its blend of sci-fi with social messages"
+        ],
+        "box_office": "Was a blockbuster in its time, exact figures not available",
+        "image": "scifi/mr_india.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Mr-India/0NBPIBF0NIRC9U3VFXA6X6GOBA",
+        "technical_details": {
+            "resolution": "SD",
+            "duration": "2h 57min",
+            "features": ["Subtitles"]
+        }
+    },
+    {
+        "title": "Koi... Mil Gaya",
+        "year": 2003,
+        "industry": "Bollywood",
+        "genre": ["Sci-Fi", "Drama", "Family"],
+        "lead_cast": ["Hrithik Roshan", "Preity Zinta", "Rekha"],
+        "director": "Rakesh Roshan",
+        "notable_aspects": [
+            "Introduced the character of Jaadoo, an alien",
+            "Became a franchise with sequels in 'Krrish' series",
+            "Balanced emotional storytelling with sci-fi elements"
+        ],
+        "box_office": "Over ₹80 crore, one of the highest-grossing films of the year",
+        "image": "scifi/koi_mil_gaya.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Koi-Mil-Gaya/0TEJVUOJVBKQTXU91D75C5D5NF",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 51min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Ra.One",
+        "year": 2011,
+        "industry": "Bollywood",
+        "genre": ["Sci-Fi", "Action", "Adventure"],
+        "lead_cast": ["Shah Rukh Khan", "Kareena Kapoor Khan", "Arjun Rampal"],
+        "director": "Anubhav Sinha",
+        "notable_aspects": [
+            "One of the most expensive Bollywood films at the time",
+            "Explored themes of video games and virtual reality",
+            "Noted for its visual effects and action sequences"
+        ],
+        "box_office": "Over ₹200 crore, despite mixed reviews, was a commercial success",
+        "image": "scifi/ra_one.jpg",
+        "ott_link": "https://www.primevideo.com/detail/RaOne/0TZZDMNZEZX39DW6CL8QS4J8X1",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 36min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "PK",
+        "year": 2014,
+        "industry": "Bollywood",
+        "genre": ["Sci-Fi", "Comedy", "Drama"],
+        "lead_cast": ["Aamir Khan", "Anushka Sharma", "Sushant Singh Rajput"],
+        "director": "Rajkumar Hirani",
+        "notable_aspects": [
+            "Explores themes of religion and human values through an alien's perspective",
+            "One of the highest-grossing Indian films",
+            "Aamir Khan's performance was critically acclaimed"
+        ],
+        "box_office": "Over ₹792 crore worldwide, a blockbuster hit",
+        "image": "scifi/pk.jpg",
+        "ott_link": "https://www.netflix.com/in/title/70303496",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 33min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Mission Mangal",
+        "year": 2019,
+        "industry": "Bollywood",
+        "genre": ["Sci-Fi", "Drama", "Biography"],
+        "lead_cast": ["Akshay Kumar", "Vidya Balan", "Sonakshi Sinha"],
+        "director": "Jagan Shakti",
+        "notable_aspects": [
+            "Based on the true story of ISRO's Mars Orbiter Mission",
+            "Celebrated for its portrayal of women scientists",
+            "Mixes real science with dramatic storytelling"
+        ],
+        "box_office": "Over ₹200 crore, a box office success",
+        "image": "scifi/mission_mangal.jpg",
+        "ott_link": "https://www.hotstar.com/in/movies/mission-mangal/1260011536",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 13min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Dasavatharam",
+        "year": 2008,
+        "industry": "Tollywood",
+        "genre": ["Sci-Fi", "Action", "Drama"],
+        "lead_cast": ["Kamal Haasan", "Asin", "Jaya Prada"],
+        "director": "K. S. Ravikumar",
+        "notable_aspects": [
+            "Kamal Haasan played ten different roles, showcasing his versatility",
+            "Involved complex makeup and prosthetics for character transformation",
+            "Blends historical events with a scientific plot involving a bio-weapon"
+        ],
+        "box_office": "Over ₹200 crore worldwide, making it one of the highest-grossing Tamil films at the time",
+        "image": "scifi/dasavatharam.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Dasavathaaram/0J00KSXRLMVN1RMZ4C02ONQUJL",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 48min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Eega",
+        "year": 2012,
+        "industry": "Tollywood",
+        "genre": ["Sci-Fi", "Fantasy", "Action"],
+        "lead_cast": ["Nani", "Samantha Ruth Prabhu", "Sudeep"],
+        "director": "S. S. Rajamouli",
+        "notable_aspects": [
+            "Unique concept of a man reincarnated as a fly for revenge",
+            "Praised for its innovative storytelling and VFX",
+            "A box office and critical success"
+        ],
+        "box_office": "Over ₹125 crore, a blockbuster hit",
+        "image": "scifi/eega.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Eega/0QBUB4RW5KJT3KT86FKT3HNQIK",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 25min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "24",
+        "year": 2016,
+        "industry": "Tollywood",
+        "genre": ["Sci-Fi", "Thriller"],
+        "lead_cast": ["Suriya", "Samantha Ruth Prabhu", "Nithya Menen"],
+        "director": "Vikram Kumar",
+        "notable_aspects": [
+            "Time travel and time loop concepts with a watch as the central device",
+            "Suriya's triple role was a highlight",
+            "Noted for its plot twists and engaging narrative"
+        ],
+        "box_office": "Over ₹100 crore, a commercial success",
+        "image": "scifi/24.jpg",
+        "ott_link": "https://www.primevideo.com/detail/24/0MRWZGKRKKHFUEN3OTNCBL9CSS",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 44min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Robo",
+        "year": 2010,
+        "industry": "Tollywood",
+        "genre": ["Sci-Fi", "Action"],
+        "lead_cast": ["Rajinikanth", "Aishwarya Rai Bachchan"],
+        "director": "S. Shankar",
+        "notable_aspects": [
+            "Also known as 'Enthiran', one of the highest-grossing Tamil films",
+            "Explores themes of robotics, AI, and human emotion",
+            "Known for its groundbreaking VFX for Indian cinema at the time"
+        ],
+        "box_office": "Over ₹290 crore worldwide, a monumental success",
+        "image": "scifi/robo.jpg",
+        "ott_link": "https://www.sunnxt.com/telugu-movie-robo-2010/detail/101254",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 54min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Kalki 2898 AD",
+        "year": 2024,
+        "industry": "Tollywood",
+        "genre": ["Sci-Fi", "Action", "Fantasy"],
+        "lead_cast": ["Prabhas", "Amitabh Bachchan", "Deepika Padukone"],
+        "director": "Nag Ashwin",
+        "notable_aspects": [
+            "A blend of Hindu mythology and futuristic dystopia",
+            "One of the most expensive Indian films ever made",
+            "Expected to set new benchmarks in Indian cinema VFX"
+        ],
+        "box_office": "Projected to be among the highest-grossing films, exact figures TBD",
+        "image": "scifi/kalki_2898_ad.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Kalki-2898-AD/0KQU5V0T0FGF8L5L368NKW6INT",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "3h+",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    }
+]

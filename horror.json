@@ -1,0 +1,317 @@
+[
+    {
+        "title": "The Conjuring",
+        "year": 2013,
+        "industry": "Hollywood",
+        "genre": ["Horror", "Mystery", "Thriller"],
+        "lead_cast": ["Vera Farmiga", "Patrick Wilson", "Lili Taylor"],
+        "director": "James Wan",
+        "notable_aspects": [
+            "Based on the true-life case files of the Warrens",
+            "Launched a successful horror franchise",
+            "Known for its atmospheric tension and jump scares"
+        ],
+        "box_office": "Over $319 million worldwide, enjoyed significant success in India",
+        "image": "horror/the_conjuring.jpg",
+        "ott_link": "https://www.primevideo.com/detail/The-Conjuring/0HX4ESOLA3Q3YD2ILLZLB8MQV7",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "1h 52min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Insidious",
+        "year": 2010,
+        "industry": "Hollywood",
+        "genre": ["Horror", "Mystery", "Thriller"],
+        "lead_cast": ["Patrick Wilson", "Rose Byrne", "Ty Simpkins"],
+        "director": "James Wan",
+        "notable_aspects": [
+            "Focuses on astral projection and demonic entities",
+            "Spawned multiple sequels due to its popularity",
+            "Noted for its effective use of suspense and scares"
+        ],
+        "box_office": "Over $100 million worldwide, had a strong fan base in India",
+        "image": "horror/insidious.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Insidious/0JGH6G03OD9MLOE18O2F6WFZ1J",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "1h 43min",
+            "features": ["HDR", "Dolby Digital"]
+        }
+    },
+    {
+        "title": "The Exorcist",
+        "year": 1973,
+        "industry": "Hollywood",
+        "genre": ["Horror"],
+        "lead_cast": ["Ellen Burstyn", "Max von Sydow", "Linda Blair"],
+        "director": "William Friedkin",
+        "notable_aspects": [
+            "Regarded as one of the scariest films ever made",
+            "Based on the novel by William Peter Blatty",
+            "Revolutionized horror with its realistic portrayal of possession"
+        ],
+        "box_office": "Over $441 million worldwide when adjusted for inflation, still popular in India for re-releases and home video",
+        "image": "horror/the_exorcist.jpg",
+        "ott_link": "https://www.primevideo.com/detail/The-Exorcist/0IZ2N9EUUJDP66QBK1ELVZJQQC",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 2min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "A Quiet Place",
+        "year": 2018,
+        "industry": "Hollywood",
+        "genre": ["Horror", "Drama", "Sci-Fi"],
+        "lead_cast": ["Emily Blunt", "John Krasinski", "Millicent Simmonds"],
+        "director": "John Krasinski",
+        "notable_aspects": [
+            "A unique horror concept revolving around silence",
+            "Directed and co-written by John Krasinski",
+            "Praised for its tension, performances, and innovative storytelling"
+        ],
+        "box_office": "Over $340 million worldwide, its novel approach was well-received in India",
+        "image": "horror/a_quiet_place.jpg",
+        "ott_link": "https://www.hotstar.com/in/movies/a-quiet-place/1971001357",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "1h 30min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Annabelle",
+        "year": 2014,
+        "industry": "Hollywood",
+        "genre": ["Horror", "Mystery", "Thriller"],
+        "lead_cast": ["Annabelle Wallis", "Ward Horton"],
+        "director": "John R. Leonetti",
+        "notable_aspects": [
+            "A spin-off from 'The Conjuring' focusing on the haunted doll",
+            "Part of the expansive Conjuring Universe",
+            "Known for its creepy doll and eerie atmosphere"
+        ],
+        "box_office": "Over $257 million worldwide, the doll became iconic even in India",
+        "image": "horror/annabelle.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Annabelle/0O8SSK41MYY5YH47EQE0T8B34R",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "1h 39min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Stree",
+        "year": 2018,
+        "industry": "Bollywood",
+        "genre": ["Horror", "Comedy"],
+        "lead_cast": ["Rajkummar Rao", "Shraddha Kapoor", "Pankaj Tripathi"],
+        "director": "Amar Kaushik",
+        "notable_aspects": [
+            "Blends horror with comedy, based on an urban legend",
+            "One of the highest-grossing Indian horror films",
+            "Praised for its innovative storytelling and performances"
+        ],
+        "box_office": "Over ₹130 crore, a blockbuster hit in India",
+        "image": "horror/stree.jpg",
+        "ott_link": "https://www.hotstar.com/in/movies/stree/1000223587",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 3min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Bhoot",
+        "year": 2003,
+        "industry": "Bollywood",
+        "genre": ["Horror", "Mystery", "Thriller"],
+        "lead_cast": ["Ajay Devgn", "Urmila Matondkar", "Rekha"],
+        "director": "Ram Gopal Varma",
+        "notable_aspects": [
+            "A chilling story of a haunted apartment",
+            "Urmila Matondkar's performance was critically acclaimed",
+            "Known for its atmospheric horror and suspense"
+        ],
+        "box_office": "Over ₹15 crore, was a significant success for its time",
+        "image": "horror/bhoot.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Bhoot/0KVPSBIFPKPN7YP8ERQRI1BHN4",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "1h 53min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Raaz",
+        "year": 2002,
+        "industry": "Bollywood",
+        "genre": ["Horror", "Thriller"],
+        "lead_cast": ["Bipasha Basu", "Dino Morea"],
+        "director": "Vikram Bhatt",
+        "notable_aspects": [
+            "Started a popular horror franchise in Bollywood",
+            "Mixes romance with supernatural elements",
+            "Noted for its memorable music and eerie narrative"
+        ],
+        "box_office": "Over ₹33 crore, one of the most successful horror films then",
+        "image": "horror/raaz.jpg",
+        "ott_link": "https://www.primevideo.com/-/hi/detail/Raaz/0GYZQEY48K9TELWQLGMYHG6OVG",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 32min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Bhool Bhulaiyaa",
+        "year": 2007,
+        "industry": "Bollywood",
+        "genre": ["Horror", "Comedy", "Mystery"],
+        "lead_cast": ["Akshay Kumar", "Vidya Balan", "Shiney Ahuja"],
+        "director": "Priyadarshan",
+        "notable_aspects": [
+            "A remake with added comedic elements to the original Malayalam film",
+            "Vidya Balan's performance as Manjulika was iconic",
+            "Mixes psychological horror with humor and suspense"
+        ],
+        "box_office": "Over ₹82 crore, one of the most successful horror-comedies",
+        "image": "horror/bhool_bhulaiyaa.jpg",
+        "ott_link": "https://www.hotstar.com/in/movies/bhool-bhulaiyaa/1260084456",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 39min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "1920",
+        "year": 2008,
+        "industry": "Bollywood",
+        "genre": ["Horror", "Thriller"],
+        "lead_cast": ["Rajneesh Duggal", "Adah Sharma"],
+        "director": "Vikram Bhatt",
+        "notable_aspects": [
+            "Set in the pre-independence era with a supernatural twist",
+            "Spawned a franchise due to its success",
+            "Known for its haunting ambiance and classic horror elements"
+        ],
+        "box_office": "Over ₹11 crore, launched a successful series",
+        "image": "horror/1920.jpg",
+        "ott_link": "https://www.primevideo.com/detail/1920/0NYJQZO240OH992W93Q5M616B9",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 13min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Arundhati",
+        "year": 2009,
+        "industry": "Tollywood",
+        "genre": ["Horror", "Fantasy"],
+        "lead_cast": ["Anushka Shetty", "Sonu Sood", "Arjun Sarja"],
+        "director": "Kodi Ramakrishna",
+        "notable_aspects": [
+            "A period drama with supernatural elements",
+            "Anushka Shetty's dual roles were highly praised",
+            "One of the highest-grossing Telugu films at the time"
+        ],
+        "box_office": "Over ₹70 crore, a blockbuster across India",
+        "image": "horror/arundhati.jpg",
+        "ott_link": "https://www.sunnxt.com/telugu-movie-arundhathi-telugu-2009/detail/9070",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 58min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Chandramukhi",
+        "year": 2005,
+        "industry": "Tollywood",
+        "genre": ["Horror", "Comedy"],
+        "lead_cast": ["Rajinikanth", "Jyothika", "Nayantara"],
+        "director": "P. Vasu",
+        "notable_aspects": [
+            "Remake of the Malayalam film 'Manichitrathazhu'",
+            "Famous for its blend of horror and humor",
+            "One of the highest-grossing films in Telugu at the time"
+        ],
+        "box_office": "Over ₹40 crore, a major success in Telugu states",
+        "image": "horror/chandramukhi.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Chandramukhi/0TH47WZM3GE6DDXU9QYJ6SEII3",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 46min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Masooda",
+        "year": 2022,
+        "industry": "Tollywood",
+        "genre": ["Horror", "Thriller"],
+        "lead_cast": ["Sangeetha", "Thiruveer", "Kavya Kalyanram"],
+        "director": "Sai Kiran",
+        "notable_aspects": [
+            "A fresh take on horror with a strong narrative",
+            "Well received for its storytelling and performances",
+            "Gained a cult following for its horror elements"
+        ],
+        "box_office": "Achieved commercial success, exact figures not widely publicized",
+        "image": "horror/masooda.jpg",
+        "ott_link": "https://www.aha.video/movie/masooda",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 8min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Rathri",
+        "year": 1992,
+        "industry": "Tollywood",
+        "genre": ["Horror", "Mystery"],
+        "lead_cast": ["Revathi", "Krishnam Raju", "Vijayakumar"],
+        "director": "Ram Gopal Varma",
+        "notable_aspects": [
+            "One of the earliest horror films by Ram Gopal Varma",
+            "Noted for its eerie atmosphere and narrative",
+            "A cult classic in Telugu horror cinema"
+        ],
+        "box_office": "A hit in its time, exact figures not available but known for its impact",
+        "image": "horror/rathri.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Raatri/0R1DVOZT50ZRM43HJPGFUUU4NZ",
+        "technical_details": {
+            "resolution": "SD",
+            "duration": "2h 3min",
+            "features": ["Subtitles"]
+        }
+    },
+    {
+        "title": "Deyyam",
+        "year": 1996,
+        "industry": "Tollywood",
+        "genre": ["Horror", "Thriller"],
+        "lead_cast": ["Maheshwari", "J.D. Chakravarthy", "Ram Gopal Varma"],
+        "director": "Ram Gopal Varma",
+        "notable_aspects": [
+            "Another horror classic by Ram Gopal Varma",
+            "Known for its psychological horror and suspense",
+            "Made a significant impact on Telugu horror genre"
+        ],
+        "box_office": "A commercial success for its genre, exact figures not widely reported",
+        "image": "horror/deyyam.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Deyyam/0GHZXASQNKP647GWI3MHB5AO47",
+        "technical_details": {
+            "resolution": "SD",
+            "duration": "2h 12min",
+            "features": ["Subtitles"]
+        }
+    }
+]

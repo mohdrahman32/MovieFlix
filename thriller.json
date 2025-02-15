@@ -1,0 +1,317 @@
+[
+    {
+        "title": "Inception",
+        "year": 2010,
+        "industry": "Hollywood",
+        "genre": ["Thriller", "Sci-Fi", "Action"],
+        "lead_cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"],
+        "director": "Christopher Nolan",
+        "notable_aspects": [
+            "Revolutionary concept of dream within dreams",
+            "Mind-bending narrative structure",
+            "Praised for its visuals and special effects"
+        ],
+        "box_office": "Over $829 million worldwide, a significant impact in India for its complexity",
+        "image": "thriller/inception.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Inception/0KN3PDZAGPSCED6GLROBJP5A5X",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 28min",
+            "features": ["IMAX", "Dolby Surround 7.1"]
+        }
+    },
+    {
+        "title": "Gone Girl",
+        "year": 2014,
+        "industry": "Hollywood",
+        "genre": ["Thriller", "Mystery", "Drama"],
+        "lead_cast": ["Ben Affleck", "Rosamund Pike", "Neil Patrick Harris"],
+        "director": "David Fincher",
+        "notable_aspects": [
+            "Adapted from Gillian Flynn's bestselling novel",
+            "Complex character study and twisty plot",
+            "Rosamund Pike's performance was critically acclaimed"
+        ],
+        "box_office": "Over $369 million worldwide, popular in India for its suspense",
+        "image": "thriller/gone_girl.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Gone-Girl-4K-UHD/0KZW29TR0N4TEKXRFFCI2ZKEYP",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 29min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Shutter Island",
+        "year": 2010,
+        "industry": "Hollywood",
+        "genre": ["Thriller", "Mystery", "Drama"],
+        "lead_cast": ["Leonardo DiCaprio", "Mark Ruffalo", "Ben Kingsley"],
+        "director": "Martin Scorsese",
+        "notable_aspects": [
+            "Set in a psychiatric facility with psychological twists",
+            "Known for its unexpected ending",
+            "Leonardo DiCaprio's performance was widely praised"
+        ],
+        "box_office": "Over $294 million worldwide, enjoyed a cult following in India",
+        "image": "thriller/shutter_island.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Shutter-Island/0O2PTYZIO373XRM80BFH7PMODL",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "2h 18min",
+            "features": ["HDR", "Dolby Digital"]
+        }
+    },
+    {
+        "title": "Extraction",
+        "year": 2020,
+        "industry": "Hollywood",
+        "genre": ["Action", "Thriller"],
+        "lead_cast": ["Chris Hemsworth", "Rudhraksh Jaiswal", "Randeep Hooda"],
+        "director": "Sam Hargrave",
+        "notable_aspects": [
+            "Noted for its one-take action sequence",
+            "Based on the graphic novel 'Ciudad' by Ande Parks",
+            "Gained massive popularity on streaming platforms"
+        ],
+        "box_office": "Not applicable (released on Netflix), but one of the most watched films in India",
+        "image": "thriller/extraction.jpg",
+        "ott_link": "https://www.netflix.com/in/title/80230399",
+        "technical_details": {
+            "resolution": "4K",
+            "duration": "1h 56min",
+            "features": ["HDR", "Dolby Atmos"]
+        }
+    },
+    {
+        "title": "Tenet",
+        "year": 2020,
+        "industry": "Hollywood",
+        "genre": ["Action", "Thriller", "Sci-Fi"],
+        "lead_cast": ["John David Washington", "Robert Pattinson", "Elizabeth Debicki"],
+        "director": "Christopher Nolan",
+        "notable_aspects": [
+            "Explores the concept of time inversion",
+            "Known for its complex narrative and high-concept ideas",
+            "Produced during the global health crisis, impacting its release strategy"
+        ],
+        "box_office": "Over $363 million worldwide, despite being released during the downturn",
+        "image": "thriller/tenet.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Tenet/0SXMIJPJ25O9LQBBHV0Y11PV0B",
+        "technical_details": {
+            "resolution": "IMAX Enhanced (for home viewing)",
+            "duration": "2h 30min",
+            "features": ["Dolby Atmos", "IMAX Enhanced"]
+        }
+    },
+    {
+        "title": "Kahaani",
+        "year": 2012,
+        "industry": "Bollywood",
+        "genre": ["Thriller", "Mystery"],
+        "lead_cast": ["Vidya Balan", "Parambrata Chatterjee", "Nawazuddin Siddiqui"],
+        "director": "Sujoy Ghosh",
+        "notable_aspects": [
+            "Set in Kolkata, with a strong female lead",
+            "Noted for its twists and turns in the narrative",
+            "Vidya Balan's performance was critically acclaimed"
+        ],
+        "box_office": "Over ₹100 crore, a blockbuster in India",
+        "image": "bollywood/kahaani.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Kahaani/0LCTIY9F3O84N0CA0QJKIP26EM",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 3min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Drishyam",
+        "year": 2015,
+        "industry": "Bollywood",
+        "genre": ["Thriller", "Drama"],
+        "lead_cast": ["Ajay Devgn", "Tabu", "Shriya Saran"],
+        "director": "Nishikant Kamat",
+        "notable_aspects": [
+            "Remake of the Malayalam film of the same name",
+            "Focuses on the battle of wits between a family man and law enforcement",
+            "Praised for its engaging storytelling and performances"
+        ],
+        "box_office": "Over ₹100 crore, a huge success in India",
+        "image": "bollywood/Drishyam.jpg",
+        "ott_link": "https://www.netflix.com/in/title/80068117",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 43min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Talaash: The Answer Lies Within",
+        "year": 2012,
+        "industry": "Bollywood",
+        "genre": ["Thriller", "Mystery", "Drama"],
+        "lead_cast": ["Aamir Khan", "Kareena Kapoor", "Rani Mukerji"],
+        "director": "Reema Kagti",
+        "notable_aspects": [
+            "Blends psychological thriller elements with supernatural hints",
+            "Strong performances, especially by Rani Mukerji",
+            "Known for its atmospheric setting in Mumbai"
+        ],
+        "box_office": "Over ₹174 crore, one of the year's top earners in India",
+        "image": "bollywood/talaash.jpg",
+        "ott_link": "https://www.amazon.com/Talaash-Aamir-Khan/dp/B00A6K2ZSQ",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 20min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Badla",
+        "year": 2019,
+        "industry": "Bollywood",
+        "genre": ["Thriller", "Mystery"],
+        "lead_cast": ["Amitabh Bachchan", "Taapsee Pannu", "Amrita Singh"],
+        "director": "Sujoy Ghosh",
+        "notable_aspects": [
+            "Adaptation of the Spanish film 'The Invisible Guest'",
+            "A cat-and-mouse game set in a confined space",
+            "Amitabh Bachchan and Taapsee Pannu's performances were highlights"
+        ],
+        "box_office": "Over ₹100 crore, successful both critically and commercially",
+        "image": "bollywood/badla.jpg",
+        "ott_link": "https://www.netflix.com/in/title/81112446",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 0min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Special 26",
+        "year": 2013,
+        "industry": "Bollywood",
+        "genre": ["Thriller", "Crime", "Drama"],
+        "lead_cast": ["Akshay Kumar", "Manjot Singh", "Anupam Kher"],
+        "director": "Neeraj Pandey",
+        "notable_aspects": [
+            "Inspired by real-life events of the 1987 Opera House heist",
+            "A heist thriller with a patriotic undertone",
+            "Akshay Kumar's role was particularly appreciated"
+        ],
+        "box_office": "Over ₹100 crore, well-received by audiences",
+        "image": "bollywood/special_26.jpg",
+        "ott_link": "https://tv.apple.com/in/movie/special-26/umc.cmc.63al9hn89j5pw94h3gblrioh2",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 24min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Goodachari",
+        "year": 2018,
+        "industry": "Tollywood",
+        "genre": ["Thriller", "Action", "Spy"],
+        "lead_cast": ["Adivi Sesh", "Sobhita Dhulipala", "Jagapathi Babu"],
+        "director": "Sashi Kiran Tikka",
+        "notable_aspects": [
+            "A spy thriller with a patriotic twist",
+            "Adivi Sesh's dual role was a highlight",
+            "Launched a planned franchise with its success"
+        ],
+        "box_office": "Over ₹25 crore, a hit in the Telugu cinema landscape",
+        "image": "tollywood/goodachari.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Goodachari/0JTC6Z3S8789FTGPUWLJQICAXC",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 27min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Rakshasudu",
+        "year": 2019,
+        "industry": "Tollywood",
+        "genre": ["Thriller", "Crime", "Drama"],
+        "lead_cast": ["Bellamkonda Sreenivas", "Anupama Parameswaran", "Sarathkumar"],
+        "director": "Ramesh Varma",
+        "notable_aspects": [
+            "A remake of the Tamil film 'Ratsasan'",
+            "Focuses on a serial killer investigation",
+            "Bellamkonda Sreenivas's performance was noted"
+        ],
+        "box_office": "Over ₹20 crore, successful for its genre",
+        "image": "tollywood/rakshasudu.jpg",
+        "ott_link": "https://www.sunnxt.com/telugu-movie-rakshasudu-2019-2019/detail/89105",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "2h 5min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Anveshana",
+        "year": 1985,
+        "industry": "Tollywood",
+        "genre": ["Thriller", "Mystery"],
+        "lead_cast": ["Karthik", "Bhanupriya", "Rajendra Prasad"],
+        "director": "Vamsy",
+        "notable_aspects": [
+            "A classic suspense thriller from the 80s",
+            "Known for its innovative storytelling for the time",
+            "Remembered for its plot twists and suspense"
+        ],
+        "box_office": "Was a hit at the time, exact figures not available",
+        "image": "tollywood/anveshana.jpg",
+        "ott_link": "https://www.sunnxt.com/telugu-movie-anveshana-1985/detail/9987",
+        "technical_details": {
+            "resolution": "SD",
+            "duration": "2h 14min",
+            "features": ["Subtitles"]
+        }
+    },
+    {
+        "title": "Kshanam",
+        "year": 2016,
+        "industry": "Tollywood",
+        "genre": ["Thriller", "Mystery"],
+        "lead_cast": ["Adivi Sesh", "Adah Sharma", "Anasuya Bharadwaj"],
+        "director": "Ravikanth Perepu",
+        "notable_aspects": [
+            "A low-budget film with a gripping narrative",
+            "Adivi Sesh also co-wrote the story",
+            "Noted for its realistic portrayal and performances"
+        ],
+        "box_office": "Over ₹20 crore, a sleeper hit",
+        "image": "tollywood/kshanam.jpg",
+        "ott_link": "https://www.sunnxt.com/telugu-movie-kshanam-2016/detail/7759",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "1h 58min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    },
+    {
+        "title": "Evaru",
+        "year": 2019,
+        "industry": "Tollywood",
+        "genre": ["Thriller", "Crime", "Mystery"],
+        "lead_cast": ["Adivi Sesh", "Regina Cassandra", "Naveen Chandra"],
+        "director": "Venkat Ramji",
+        "notable_aspects": [
+            "Adaptation of the Spanish film 'The Invisible Guest'",
+            "A cat-and-mouse game with layers of mystery",
+            "Adivi Sesh's performance was critically acclaimed"
+        ],
+        "box_office": "Over ₹30 crore, a commercial success",
+        "image": "tollywood/evaru.jpg",
+        "ott_link": "https://www.primevideo.com/detail/Evaru/0RQYMFKY7GGIJT2EJ04NIFO4LQ",
+        "technical_details": {
+            "resolution": "HD",
+            "duration": "1h 58min",
+            "features": ["Dolby Digital", "Subtitles"]
+        }
+    }
+]

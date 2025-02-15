@@ -1,0 +1,317 @@
+[
+        {
+            "title": "Aladdin",
+            "year": 2019,
+            "industry": "Hollywood",
+            "genre": ["Fantasy", "Adventure", "Romance"],
+            "lead_cast": ["Mena Massoud", "Naomi Scott", "Will Smith"],
+            "director": "Guy Ritchie",
+            "notable_aspects": [
+                "Live-action remake of the 1992 animated classic",
+                "Will Smith's portrayal of the Genie",
+                "Elaborate song and dance numbers"
+            ],
+            "box_office": "Over $1 billion worldwide",
+            "image": "fantasy/aladdin2019.jpg",
+            "ott_link": "https://www.primevideo.com/detail/Aladdin/0L001BIEHI9CZ92M2GZADQGR9Y",
+            "technical_details": {
+                "resolution": "4K",
+                "duration": "2h 8min",
+                "features": ["HDR", "Dolby Atmos", "X-Ray"]
+            }
+        },
+        {
+            "title": "Harry Potter Series",
+            "year": "2001-2011",
+            "industry": "Hollywood",
+            "genre": ["Fantasy", "Adventure"],
+            "lead_cast": ["Daniel Radcliffe", "Emma Watson", "Rupert Grint"],
+            "director": "Multiple (Chris Columbus, Alfonso Cuarón, Mike Newell, David Yates)",
+            "notable_aspects": [
+                "Adaptation of J.K. Rowling's novels",
+                "Iconic magical school setting - Hogwarts",
+                "Evolution of characters over the series"
+            ],
+            "box_office": "One of the highest-grossing film franchises",
+            "image": "fantasy/harrypotter.jpg",
+            "ott_link": "https://www.primevideo.com/detail/Harry-Potter-and-the-Sorcerers-Stone/0N8WYH0W6L7Q0ODHGQCHMMRH4R",
+            "technical_details": {
+                "resolution": "4K (for remastered versions)",
+                "duration": "Various (each film approximately 2-3 hours)",
+                "features": ["HDR", "Dolby Atmos", "X-Ray for select titles"]
+            }
+        },
+        {
+            "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+            "year": 2003,
+            "industry": "Hollywood",
+            "genre": ["Adventure", "Fantasy", "Action"],
+            "lead_cast": ["Johnny Depp", "Geoffrey Rush", "Orlando Bloom", "Keira Knightley"],
+            "director": "Gore Verbinski",
+            "notable_aspects": [
+                "Johnny Depp's iconic portrayal of Captain Jack Sparrow",
+                "Combination of pirate adventure with supernatural elements",
+                "Memorable score by Hans Zimmer"
+            ],
+            "box_office": "Over $650 million worldwide",
+            "image": "fantasy/piratesblackpearl.jpg",
+            "ott_link": "https://www.primevideo.com/detail/Pirates-of-the-Caribbean-The-Curse-of-the-Black-Pearl/0QKDI6EQYO5Y2STS1GLJMURR9G",
+            "technical_details": {
+                "resolution": "4K",
+                "duration": "2h 23min",
+                "features": ["HDR", "Dolby Atmos", "X-Ray"]
+            }
+        },
+        {
+            "title": "Doctor Strange",
+            "year": 2016,
+            "industry": "Hollywood",
+            "genre": ["Superhero", "Action", "Fantasy"],
+            "lead_cast": ["Benedict Cumberbatch", "Chiwetel Ejiofor", "Rachel McAdams", "Benedict Wong", "Mads Mikkelsen"],
+            "director": "Scott Derrickson",
+            "notable_aspects": [
+                "Introduction of magic to the Marvel Cinematic Universe",
+                "Innovative visual effects for depicting magic and alternate dimensions",
+                "Benedict Cumberbatch's performance as Doctor Stephen Strange"
+            ],
+            "box_office": "Over $677 million worldwide",
+            "image": "fantasy/doctorstrange.jpg",
+            "ott_link": "https://www.primevideo.com/detail/Doctor-Strange-Theatrical/0OWKLUQIV4R4L0QW8LBD0ILPCC",
+            "technical_details": {
+                "resolution": "4K",
+                "duration": "1h 55min",
+                "features": ["HDR", "Dolby Atmos", "X-Ray"]
+            }
+        },
+        {
+            "title": "Jumanji: Welcome to the Jungle",
+            "year": 2017,
+            "industry": "Hollywood",
+            "genre": ["Adventure", "Comedy", "Fantasy"],
+            "lead_cast": ["Dwayne Johnson", "Kevin Hart", "Jack Black", "Karen Gillan"],
+            "director": "Jake Kasdan",
+            "notable_aspects": [
+                "Modern take on the original 'Jumanji' concept",
+                "Body-swap comedy with video game elements",
+                "Strong ensemble cast performances"
+            ],
+            "box_office": "Over $962 million worldwide",
+            "image": "adventure/jumanjiwelcome.jpg",
+            "ott_link": "https://www.primevideo.com/detail/Jumanji-Welcome-to-the-Jungle/0MRVP13EU740S32T2SFT9HQ0UR",
+            "technical_details": {
+                "resolution": "4K",
+                "duration": "1h 59min",
+                "features": ["HDR", "Dolby Atmos", "X-Ray"]
+            }
+        },
+        {
+            "title": "God Tussi Great Ho",
+            "year": 2008,
+            "industry": "Bollywood",
+            "genre": ["Comedy", "Fantasy"],
+            "lead_cast": ["Amitabh Bachchan", "Salman Khan", "Priyanka Chopra"],
+            "director": "Rumi Jaffery",
+            "notable_aspects": [
+                "Amitabh Bachchan playing God",
+                "Remake of 'Bruce Almighty'",
+                "Exploration of human responsibility with divine powers"
+            ],
+            "box_office": "Moderate success at the box office",
+            "image": "fantasy/godtussigreatho.jpg",
+            "ott_link": "https://www.primevideo.com/detail/God-Tussi-Great-Ho-English-subtitled/0OFI6WWF70J1AKP75KGE4GNNYG",
+            "technical_details": {
+                "resolution": "HD",
+                "duration": "2h 32min",
+                "features": ["Dolby Digital", "Closed Captions"]
+            }
+        },
+        {
+            "title": "Tumbbad",
+            "year": 2018,
+            "industry": "Bollywood",
+            "genre": ["Drama", "Fantasy", "Horror"],
+            "lead_cast": ["Sohum Shah", "Jyoti Malshe", "Anita Date-Kelkar"],
+            "director": "Rahi Anil Barve, Anand Gandhi, Adesh Prasad",
+            "notable_aspects": [
+                "Unique blend of folklore and horror",
+                "Critically acclaimed for its storytelling and visuals",
+                "Explores themes of greed and consequence"
+            ],
+            "box_office": "Cult success with limited release",
+            "image": "fantasy/tumbbad.jpg",
+            "ott_link": "https://www.amazon.com/Tumbbad-Sohum-Shah/dp/B07J1J9Y6Q",
+            "technical_details": {
+                "resolution": "HD",
+                "duration": "1h 48min",
+                "features": ["Dolby Digital", "Subtitles"]
+            }
+        },
+        {
+            "title": "Brahmāstra: Part One – Shiva",
+            "year": 2022,
+            "industry": "Bollywood",
+            "genre": ["Fantasy", "Action", "Adventure"],
+            "lead_cast": ["Ranbir Kapoor", "Alia Bhatt", "Amitabh Bachchan"],
+            "director": "Ayan Mukerji",
+            "notable_aspects": [
+                "First film in a planned trilogy",
+                "High-budget with extensive use of VFX",
+                "Inspired by Indian mythology"
+            ],
+            "box_office": "One of the highest-grossing Hindi films of 2022",
+            "image": "fantasy/brahmastra.jpg",
+            "ott_link": "https://www.hotstar.com/in/movies/brahmastra-part-one-shiva/1260110227",
+            "technical_details": {
+                "resolution": "4K",
+                "duration": "2h 48min",
+                "features": ["HDR", "Dolby Atmos", "X-Ray"]
+            }
+        },
+        {
+            "title": "Jajantaram Mamantaram",
+            "year": 2003,
+            "industry": "Bollywood",
+            "genre": ["Fantasy", "Adventure", "Comedy"],
+            "lead_cast": ["Jaaved Jaaferi", "Jaspal Bhatti"],
+            "director": "Soumitra Ranade",
+            "notable_aspects": [
+                "Indian adaptation of Gulliver's Travels",
+                "Notable for its use of special effects for the time",
+                "Cult following due to its humor and creativity"
+            ],
+            "box_office": "Modest success",
+            "image": "fantasy/jajantaram.jpg",
+            "ott_link": "https://www.primevideo.com/detail/Jajantaram-Mamantaram/0FSF4PPNDSB6N973K6BEQNH8CU",
+            "technical_details": {
+                "resolution": "SD",
+                "duration": "1h 45min",
+                "features": ["Stereo Sound"]
+            }
+        },
+        {
+            "title": "Munjya",
+            "year": 2024,
+            "industry": "Bollywood",
+            "genre": ["Horror", "Comedy", "Fantasy"],
+            "lead_cast": ["Sharvari Wagh", "Abhay Verma", "Mona Singh"],
+            "director": "Aditya Sarpotdar",
+            "notable_aspects": [
+                "Part of an emerging horror-comedy genre in Bollywood",
+                "Based on Indian folklore",
+                "Mix of humor and supernatural elements"
+            ],
+            "box_office": "Information not available at this time",
+            "image": "fantasy/munjya.jpg",
+            "ott_link": "https://www.hotstar.com/in/movies/munjya/1271326340",
+            "technical_details": {
+                "resolution": "4K (Expected)",
+                "duration": "Unknown",
+                "features": ["Expected to include modern audio-visual enhancements"]
+            }
+        },
+        {
+            "title": "Khaleja",
+            "year": 2010,
+            "industry": "Tollywood",
+            "genre": ["Action", "Comedy", "Fantasy"],
+            "lead_cast": ["Mahesh Babu", "Anushka Shetty"],
+            "director": "Trivikram Srinivas",
+            "notable_aspects": [
+                "Mahesh Babu in a unique role as a common man turned savior",
+                "Mix of action, comedy, and fantasy elements",
+                "Known for its unique narrative style"
+            ],
+            "box_office": "Commercially successful",
+            "image": "action/khaleja.jpg",
+            "ott_link": "https://www.sunnxt.com/telugu-movie-khaleja-2010/detail/10412",
+            "technical_details": {
+                "resolution": "HD",
+                "duration": "2h 40min",
+                "features": ["Dolby Digital", "Subtitles"]
+            }
+        },
+        {
+            "title": "Kanguva",
+            "year": 2024,
+            "industry": "Tollywood",
+            "genre": ["Action", "Adventure", "Fantasy"],
+            "lead_cast": ["Suriya", "Disha Patani", "Bobby Deol"],
+            "director": "Siva",
+            "notable_aspects": [
+                "Suriya in dual roles across different timelines",
+                "High-budget film with extensive VFX",
+                "Inspired by historical and mythical elements"
+            ],
+            "box_office": "Not released yet, expected to be high",
+            "image": "fantasy/kanguva.jpg",
+            "ott_link": "https://www.primevideo.com/detail/Kanguva/0OEV95ZHY3SDZ4IFLDZU57FWF4",
+            "technical_details": {
+                "resolution": "4K (Expected)",
+                "duration": "Unknown",
+                "features": ["Expected to include modern audio-visual enhancements"]
+            }
+        },
+        {
+            "title": "Bimbisara",
+            "year": 2022,
+            "industry": "Tollywood",
+            "genre": ["Action", "Fantasy", "Drama"],
+            "lead_cast": ["Nandamuri Kalyan Ram", "Catherine Tresa", "Samyuktha Menon"],
+            "director": "Mallesham Vashist",
+            "notable_aspects": [
+                "Time travel from ancient to modern times",
+                "Inspired by the life of Bimbisara, an ancient Indian king",
+                "Known for its action sequences and visual effects"
+            ],
+            "box_office": "Hit at the box office",
+            "image": "fantasy/bimbisara.jpg",
+            "ott_link": "https://www.zee5.com/movies/details/bimbisara/0-0-1z5234688",
+            "technical_details": {
+                "resolution": "HD",
+                "duration": "2h 16min",
+                "features": ["Dolby Digital", "Subtitles"]
+            }
+        },
+        {
+            "title": "Hanu-Man",
+            "year": 2024,
+            "industry": "Tollywood",
+            "genre": ["Action", "Adventure", "Fantasy"],
+            "lead_cast": ["Teja Sajja", "Amritha Aiyer"],
+            "director": "Prasanth Varma",
+            "notable_aspects": [
+                "Based on Indian mythology, specifically Hanuman",
+                "Superhero narrative with mythological twists",
+                "Known for its visual effects and storytelling"
+            ],
+            "box_office": "Not released yet, anticipated success",
+            "image": "fantasy/hanuman.jpg",
+            "ott_link": "https://www.zee5.com/movies/details/hanu-man/0-0-1z5531939",
+            "technical_details": {
+                "resolution": "4K (Expected)",
+                "duration": "Unknown",
+                "features": ["Expected to include modern audio-visual enhancements"]
+            }
+        },
+        {
+            "title": "Magadheera",
+            "year": 2009,
+            "industry": "Tollywood",
+            "genre": ["Action", "Romance", "Fantasy"],
+            "lead_cast": ["Ram Charan", "Srihari", "Kajal Aggarwal"],
+            "director": "S. S. Rajamouli",
+            "notable_aspects": [
+                "Epic narrative spanning different eras",
+                "Iconic for its action choreography and visual effects",
+                "One of the highest-grossing Telugu films"
+            ],
+            "box_office": "Blockbuster success",
+            "image": "action/magadheera.jpg",
+            "ott_link": "https://www.primevideo.com/detail/Magadheera/0MYXT5PYFPQDSRIK5VZGSZ0W4Y",
+            "technical_details": {
+                "resolution": "HD",
+                "duration": "2h 35min",
+                "features": ["Dolby Digital", "Subtitles"]
+            }
+        }
+]
